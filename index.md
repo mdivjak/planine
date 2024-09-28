@@ -2,122 +2,68 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+Staze su razvrstane po zemljama.
 
-[Link to another page](./another-page.html).
+# Srbija
 
-There should be whitespace between paragraphs.
+## Vojvodina
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+1. [Fruška gora](planine/srbija/fruska-gora)
+2. [Vršačke planine](planine/srbija/vrsacke-planine)
+3. [Zagajička brda](planine/srbija/zagajicka-brda)
 
-# Header 1
+## Šumadijske planine
+1. Kosmaj
+2. Rudnik
+3. Vujan
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+## Zapadna Srbija
+1. Povlen
+2. Suvobor i Rajac
+3. Tara
+4. Kablar
+5. Ovčar
+6. Medvednik
+7. Magleš
+8. Kanjon Crne reke
 
-## Header 2
+## Istočna Srbija
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+1. Miroč
+2. Homoljske planine
+3. Beljanica
+4. Rtanj
+5. Stara planina
 
-### Header 3
+## Južna Srbija
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+1. Stolovi
+2. Studena planina
+3. Željin
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+## Jugoistočna Srbija
 
-#### Header 4
+1. Suva planina
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+# Crna Gora
 
-##### Header 5
+## Durmitor
+1. Veliki Međed (južni vrh)
+2. Crvena greda i Jablan jezero
+3. Zminje i Barno jezero
+4. Planinica
+5. Prutaš
+6. Škrčka jezera od Sušičkog jezera
+7. Bandijerna
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+## Orjen
+1. Subra
+2. Šanik tvrđava
 
-###### Header 6
+# Slovenija
+1. Grintovec
+2. Highlander Kamniško-savinjske Alpe
 
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
+# Nepal
+1. Annapurna Base Camp
 
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
