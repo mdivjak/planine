@@ -43,7 +43,7 @@ Staze su razvrstane po zemljama.
 
 ## Jugoistočna Srbija
 
-1. Suva planina
+1. [Suva planina](planine/srbija/suva-planina/suva-planina)
 
 # Crna Gora
 
