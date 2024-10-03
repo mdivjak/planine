@@ -8,30 +8,30 @@ Staze su razvrstane po zemljama.
 
 ## Vojvodina
 
-1. [Fruška gora](planine/srbija/fruska-gora)
-2. [Vršačke planine](planine/srbija/vrsacke-planine)
-3. [Zagajička brda](planine/srbija/zagajicka-brda)
+1. [Fruška gora](planine/srbija/fruska-gora/fruska-gora)
+2. [Vršačke planine](planine/srbija/vrsacke-planine/vrsacke-planine)
+3. [Zagajička brda](planine/srbija/zagajicka-brda/zagajicka-brda)
 
 ## Šumadijske planine
-1. Kosmaj
-2. Rudnik
-3. Vujan
+1. [Kosmaj](planine/srbija/kosmaj/kosmaj)
+2. [Rudnik](planine/srbija/rudnik/rudnik)
+3. [Vujan](planine/srbija/vujan/vujan)
 
 ## Zapadna Srbija
-1. Povlen
-2. Suvobor i Rajac
-3. Tara
-4. Kablar
-5. Ovčar
-6. Medvednik
-7. Magleš
-8. Kanjon Crne reke
+1. [Povlen](planine/srbija/povlen/povlen)
+2. [Suvobor i Rajac](planine/srbija/suvobor-rajac/suvobor-rajac)
+3. [Tara](planine/srbija/tara/tara)
+4. Kablar - los gps signal
+5. [Ovčar](planine/srbija/ovcar/ovcar)
+6. [Medvednik](planine/srbija/medvednik/medvednik)
+7. [Magleš](planine/srbija/magles/magles)
+8. [Kanjon Crne reke](planine/srbija/kanjon-crne-reke/kanjon-crne-reke)
 
 ## Istočna Srbija
 
-1. Miroč
+1. [Miroč](planine/srbija/miroc/miroc)
 2. Homoljske planine
-3. Beljanica
+3. [Beljanica](planine/srbija/beljanica/beljanica)
 4. Rtanj
 5. Stara planina
 

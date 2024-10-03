@@ -6,4 +6,4 @@ layout: default
 
 ## Manastir Središte - Hajdučke stene - Lisičija glava
 
-[GPX fajl](../../gpx/vrsacke-planine/vrsacke-planine.gpx)
+[GPX fajl](./vrsacke-planine.gpx)
