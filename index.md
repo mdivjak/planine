@@ -30,7 +30,7 @@ Staze su razvrstane po zemljama.
 ## Istočna Srbija
 
 1. [Miroč](planine/srbija/miroc/miroc)
-2. Homoljske planine
+2. [Homoljske planine](planine/srbija/homoljske-planine/homoljske-planine)
 3. [Beljanica](planine/srbija/beljanica/beljanica)
 4. [Rtanj](planine/srbija/rtanj/rtanj)
 5. [Stara planina](planine/srbija/stara-planina/stara-planina)
@@ -47,22 +47,13 @@ Staze su razvrstane po zemljama.
 
 # Crna Gora
 
-## Durmitor
-1. Veliki Međed (južni vrh)
-2. Crvena greda i Jablan jezero
-3. Zminje i Barno jezero
-4. Planinica
-5. Prutaš
-6. Škrčka jezera od Sušičkog jezera
-7. Bandijerna
-
-## Orjen
-1. Subra
-2. Šanik tvrđava
+1. [Durmitor](planine/crna-gora/durmitor/durmitor)
+2. [Orjen](planine/crna-gora/orjen/orjen)
+3. [Šanik tvrđava](planine/crna-gora/boka-kotorska/boka-kotorska)
 
 # Slovenija
-1. Grintovec
-2. Highlander Kamniško-savinjske Alpe
+
+1. [Kamniško-savinjske Alpe](planine/slovenija/kamnisko-savinjske-alpe/kamnisko-savinjske-alpe)
 
 # Nepal
 1. Annapurna Base Camp
