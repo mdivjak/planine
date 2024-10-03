@@ -32,13 +32,13 @@ Staze su razvrstane po zemljama.
 1. [Miroč](planine/srbija/miroc/miroc)
 2. Homoljske planine
 3. [Beljanica](planine/srbija/beljanica/beljanica)
-4. Rtanj
-5. Stara planina
+4. [Rtanj](planine/srbija/rtanj/rtanj)
+5. [Stara planina](planine/srbija/stara-planina/stara-planina)
 
 ## Južna Srbija
 
-1. Stolovi
-2. Studena planina
+1. [Stolovi](planine/srbija/stolovi/stolovi)
+2. [Studena planina](planine/srbija/studena-planina/studena-planina)
 3. Željin
 
 ## Jugoistočna Srbija
