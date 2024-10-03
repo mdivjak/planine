@@ -39,7 +39,7 @@ Staze su razvrstane po zemljama.
 
 1. [Stolovi](planine/srbija/stolovi/stolovi)
 2. [Studena planina](planine/srbija/studena-planina/studena-planina)
-3. Željin
+3. [Željin](planine/srbija/zeljin/zeljin)
 
 ## Jugoistočna Srbija
 
