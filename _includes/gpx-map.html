@@ -1,0 +1,41 @@
+{% assign gpx_filename = include.gpx_file | split: '/' | last | split: '.' | first %}
+
+<div id="desc-{{ gpx_filename }}"></div>
+
+<div id="map-{{ gpx_filename }}" style="height: 400px;"></div>
+
+<script type="module">
+    const mapId = 'map-{{ gpx_filename }}';
+    const descId = 'desc-{{ gpx_filename }}';
+
+    // Create the map using the unique id
+    const map = L.map(mapId);
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; <a href="http://www.osm.org">OpenStreetMap</a>'
+    }).addTo(map);
+
+    var control = L.control.layers(null, null).addTo(map);
+
+    // Use the GPX file passed as a parameter
+    const url = '{{ include.gpx_file }}';
+    const options = {
+        async: true,
+        polyline_options: { color: 'red' },
+    };
+
+    const gpx = new L.GPX(url, options).on('loaded', (e) => {
+        map.fitBounds(e.target.getBounds());
+        control.addOverlay(gpx, gpx.get_name());
+
+        let description = document.getElementById(descId);
+        description.textContent = gpx.get_name();
+        description.textContent += " " + (gpx.get_distance() / 1000).toFixed(2) + " km";
+
+        let total_time_milis = gpx.get_total_time();
+        let hours = (total_time_milis / 1000 / 3600).toFixed(0);
+        let mins = ((total_time_milis / 1000) % 3600 / 60).toFixed(0);
+
+        description.textContent += " " + hours + ":" + mins;
+        description.textContent += " " + gpx.get_elevation_gain().toFixed(0) + " m";
+    }).addTo(map);
+</script>

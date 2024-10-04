@@ -1,0 +1,36 @@
+<div id="desc2-{{ include.map_id }}"></div>
+
+<div id="map-{{ include.map_id }}" style="height: 400px;"></div>
+
+<script type="module">
+    const mapId = 'map-{{ include.map_id }}';
+    const descId = 'desc2-{{ include.map_id }}';
+    const map = L.map(mapId);
+
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; <a href="http://www.osm.org">OpenStreetMap</a>'
+    }).addTo(map);
+
+    let description = document.getElementById(descId);
+
+    const options = {
+        async: true,
+        polyline_options: { color: 'red' },
+    };
+
+    var control = L.control.layers(null, null).addTo(map);
+
+    // Split the gpx_files string into an array and loop through each file
+    {% assign gpx_files_array = include.gpx_files | split: ',' %}
+    {% for gpx_file in gpx_files_array %}
+    const url{{ forloop.index }} = '{{ gpx_file | strip }}'; // Strip extra spaces from file path
+    const gpx{{ forloop.index }} = new L.GPX(url{{ forloop.index }}, options).on('loaded', (e) => {
+        map.fitBounds(e.target.getBounds());
+        control.addOverlay(gpx{{ forloop.index }}, gpx{{ forloop.index }}.get_name());
+        description.textContent += "Route {{ forloop.index }}: " + gpx{{ forloop.index }}.get_name() + " ";
+        description.textContent += gpx{{ forloop.index }}.get_distance() + " km, ";
+        description.textContent += gpx{{ forloop.index }}.get_total_time() + " hrs, ";
+        description.textContent += gpx{{ forloop.index }}.get_elevation_gain() + " m elevation gain\n";
+    }).addTo(map);
+    {% endfor %}
+</script>
