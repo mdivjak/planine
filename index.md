@@ -56,5 +56,5 @@ Staze su razvrstane po zemljama.
 1. [Kamniško-savinjske Alpe](planine/slovenija/kamnisko-savinjske-alpe/kamnisko-savinjske-alpe)
 
 # Nepal
-1. Annapurna Base Camp
+1. [Annapurna Base Camp](planine/nepal/abc/abc)
 

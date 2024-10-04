@@ -11,6 +11,7 @@ layout: default
 ## Crvena greda i Jablan jezero
 
 [GPX fajl](./durmitor-crvena-greda.gpx)
+
 [Jablan jezero GPX fajl](./durmitor-jablan-jezero.gpx)
 
 ## Zminje i Barno jezero
