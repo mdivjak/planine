@@ -9,7 +9,9 @@
     const descId = 'desc-{{ gpx_filename }}';
 
     // Create the map using the unique id
-    const map = L.map(mapId);
+    const map = L.map(mapId, {
+        fullscreenControl: true
+    });
     L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data &copy; <a href="http://www.osm.org">OpenStreetMap</a>'
     }).addTo(map);
