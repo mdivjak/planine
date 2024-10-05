@@ -1,10 +1,25 @@
-<div id="desc2-{{ include.map_id }}"></div>
+
+<table id="gpx-stats-table-{{ include.map_id }}">
+    <thead>
+        <tr>
+            <th>Naziv</th>
+            <th>Dužina (km)</th>
+            <th>Vreme (h)</th>
+            <th>Uspon (m)</th>
+            <th>Link</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Table rows will be dynamically inserted here -->
+    </tbody>
+</table>
+
+<br>
 
 <div id="map-{{ include.map_id }}" style="height: 400px;"></div>
 
 <script type="module">
     const mapId = 'map-{{ include.map_id }}';
-    const descId = 'desc2-{{ include.map_id }}';
     const map = L.map(mapId, {
         fullscreenControl: true
     });
@@ -13,14 +28,15 @@
         attribution: 'Map data &copy; <a href="http://www.osm.org">OpenStreetMap</a>'
     }).addTo(map);
 
-    let description = document.getElementById(descId);
-
     const options = {
         async: true,
         polyline_options: { color: 'red' },
     };
 
     var control = L.control.layers(null, null).addTo(map);
+
+    // Reference to the table body
+    let tableBody = document.querySelector('#gpx-stats-table-{{ include.map_id }} tbody');
 
     // Split the gpx_files string into an array and loop through each file
     {% assign gpx_files_array = include.gpx_files | split: ',' %}
@@ -29,10 +45,44 @@
     const gpx{{ forloop.index }} = new L.GPX(url{{ forloop.index }}, options).on('loaded', (e) => {
         map.fitBounds(e.target.getBounds());
         control.addOverlay(gpx{{ forloop.index }}, gpx{{ forloop.index }}.get_name());
-        description.textContent += "Route {{ forloop.index }}: " + gpx{{ forloop.index }}.get_name() + " ";
-        description.textContent += gpx{{ forloop.index }}.get_distance() + " km, ";
-        description.textContent += gpx{{ forloop.index }}.get_total_time() + " hrs, ";
-        description.textContent += gpx{{ forloop.index }}.get_elevation_gain() + " m elevation gain\n";
+
+        // Create a new row for the table
+        let newRow = document.createElement('tr');
+
+        // Column for name of the hike
+        let nameCell = document.createElement('td');
+        nameCell.textContent = gpx{{ forloop.index }}.get_name();
+        newRow.appendChild(nameCell);
+
+        // Column for distance
+        let distanceCell = document.createElement('td');
+        distanceCell.textContent = (gpx{{ forloop.index }}.get_distance() / 1000).toFixed(2);
+        newRow.appendChild(distanceCell);
+
+        // Column for time (converted from milliseconds)
+        let timeCell = document.createElement('td');
+        let total_time_milis = gpx{{ forloop.index }}.get_total_time();
+        let hours = (total_time_milis / 1000 / 3600).toFixed(0);
+        let mins = ((total_time_milis / 1000) % 3600 / 60).toFixed(0);
+        timeCell.textContent = hours + ":" + mins;
+        newRow.appendChild(timeCell);
+
+        // Column for elevation gain
+        let elevationCell = document.createElement('td');
+        elevationCell.textContent = gpx{{ forloop.index }}.get_elevation_gain().toFixed(0);
+        newRow.appendChild(elevationCell);
+
+        // Column for link to GPX file
+        let linkCell = document.createElement('td');
+        let link = document.createElement('a');
+        link.href = url{{ forloop.index }};
+        link.textContent = 'GPX Fajl';
+        link.target = '_blank';
+        linkCell.appendChild(link);
+        newRow.appendChild(linkCell);
+
+        // Append the row to the table
+        tableBody.appendChild(newRow);
     }).addTo(map);
     {% endfor %}
 </script>
