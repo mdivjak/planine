@@ -6,4 +6,6 @@ layout: default
 
 ## Manastir Središte - Hajdučke stene - Lisičija glava
 
-[GPX fajl](./vrsacke-planine.gpx)
+Staza kreće od manastira. Penje se na Gudurički vrh, spušta i penje na vrh Lisičja glava. Staza je većinom šumska. Sećam se da je bila dosta lepa i prijatna za šetnju, mada solidno dugačka.
+
+{% include gpx-map-array.html map_id="vrsacke-planine" gpx_files="./vrsacke-planine.gpx" %}

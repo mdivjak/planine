@@ -6,6 +6,7 @@
             <th>Dužina (km)</th>
             <th>Vreme (h)</th>
             <th>Uspon (m)</th>
+            <th>Datum</th>
             <th>Link</th>
         </tr>
     </thead>
@@ -71,6 +72,12 @@
         let elevationCell = document.createElement('td');
         elevationCell.textContent = gpx{{ forloop.index }}.get_elevation_gain().toFixed(0);
         newRow.appendChild(elevationCell);
+
+        // Column for date
+        let dateCell = document.createElement('td');
+        let date = new Date(gpx{{ forloop.index }}.get_start_time()).toLocaleDateString();
+        dateCell.textContent = date;
+        newRow.appendChild(dateCell);
 
         // Column for link to GPX file
         let linkCell = document.createElement('td');
