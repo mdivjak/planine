@@ -65,7 +65,7 @@
         let total_time_milis = gpx{{ forloop.index }}.get_total_time();
         let hours = (total_time_milis / 1000 / 3600).toFixed(0);
         let mins = ((total_time_milis / 1000) % 3600 / 60).toFixed(0);
-        timeCell.textContent = hours + ":" + mins;
+        timeCell.textContent = hours + ":" + (mins < 10 ? "0" + mins : mins);
         newRow.appendChild(timeCell);
 
         // Column for elevation gain
