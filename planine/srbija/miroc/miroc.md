@@ -4,8 +4,21 @@ layout: default
 
 # Miroč
 
-Fajlovi su isti. Fajl miroc-1 je precizniji.
+Oba fajla prelaze istu stazu.
 
-[GPX fajl 1](./miroc-1.gpx)
+Staza kreće od proširenja pored magistrale gde postoji česma za vodu.
 
-[GPX fajl 2](./miroc-2.gpx)
+Staza je izuzetno lepa.
+Prolazi pored par kuća.
+Jedna kuća je imala pse koji su bili poprilično glasni, ali nisu bili agresivni.
+Samo smo polako prošli pored njih.
+Posle nekih 40ak minuta smo naišli na drugu kuću koja je imala par ogromnih šar planinaca koji su bili veoma agresivni, ali na sreću i vezani.
+Vlasnici su ih smirili da bismo mogli da prođemo pored kuće.
+
+Prošli smo i pored par urušenih starih kuća. Kroz srušene zidove su se videle slike ljudi koji su nekada tu živeli.
+
+Pogled sa vrha je fenomenalan.
+
+Mogu se izbeći kuće sa agresivnim psima ako bi se išlo do vidikovca Ploče i dalje do vrha i istim putem nazad.
+
+{% include gpx-map-array.html map_id="miroc" gpx_files="./miroc-1.gpx,./miroc-2.gpx" %}

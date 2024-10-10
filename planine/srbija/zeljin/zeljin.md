@@ -4,6 +4,4 @@ layout: default
 
 # Željin
 
-[Željin jesen GPX fajl](./zeljin-jesen.gpx)
-
-[Željin zima GPX fajl](./zeljin-zima.gpx)
+{% include gpx-map-array.html map_id="zeljin" gpx_files="./zeljin-jesen.gpx,./zeljin-zima.gpx" %}

@@ -6,5 +6,4 @@ layout: default
 
 ## Šanik tvrđava
 
-[GPX fajl](./sanik-tvrdjava.gpx)
-
+{% include gpx-map-array.html map_id="boka-kotorska" gpx_files="./sanik-tvrdjava.gpx" %}

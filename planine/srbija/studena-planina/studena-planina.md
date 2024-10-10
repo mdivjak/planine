@@ -4,4 +4,4 @@ layout: default
 
 # Studena planina
 
-[Studena planina GPX fajl](./studena-planina.gpx)
+{% include gpx-map-array.html map_id="studena-planina" gpx_files="./studena-planina.gpx" %}

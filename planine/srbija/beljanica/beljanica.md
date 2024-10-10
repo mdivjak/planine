@@ -4,26 +4,38 @@ layout: default
 
 # Beljanica
 
-## Zimski trek (napred - nazad)
-
-[Beljanica zimi GPX fajl](./beljanica-zimi.gpx)
-
-{% include gpx-map.html gpx_file="./beljanica-zimi.gpx" %}
+Beljanica je jedan od težih uspona u Srbiji.
 
 ## Beljanica napred nazad
 
-[Beljanica napred nazad GPX fajl](./beljanica-inout.gpx)
+Najjednostavniji uspon je od restorana i vodopada Veliki buk.
+Staza u početku dobrim delom ide širokim šumskim putem.
+Postoji skretanje do vidikovca kanjona Resave koji vredi videti.
+Nakon toga staza nastavlja i u jednom trenutku kreće strmo kroz šumu.
+Taj strmi deo traje oko sat vremena.
+Nakon toga staza nastavlja uzbrdo, ali malo manjim nagibom.
 
-{% include gpx-map.html gpx_file="./beljanica-inout.gpx" %}
+{% include gpx-map-array.html map_id="beljanica" gpx_files="./beljanica-inout.gpx" %}
 
 ## Beljanica kružna kroz potok
 
-[Beljanica kružna kroz potok](./beljanica-kroz-potok.gpx)
+Ovaj gpx fajl kreće sa magistrale i ne završava tačno na istom mestu, ali može da se krene od vodopada i isprati deo iz gornjeg treka do vidikovca kanjona Resave.
 
-{% include gpx-map.html gpx_file="./beljanica-kroz-potok.gpx" %}
+Staza se spušta do potoka i potrebno je snalaženja da se nađe tačno mesto za spuštanje sa grebena Beljanice. Kada sam išao ovom stazom bila je solidno zarasla dok se nismo približili potoku. Od potoka je staza samo pratila potok i bez većih problema smo nastavili i stigli do vodopada.
+
+{% include gpx-map-array.html map_id="beljanica-potok" gpx_files="./beljanica-kroz-potok.gpx" %}
 
 ## Beljanica kružna
 
-[Beljanica kružna](./beljanica-kruzna-duza.gpx)
+Ovo je najnapornija varijanta uspona na Beljanicu.
+Kreće od vodopada i ide do vrela.
+Potom se jednim kraćim delom ide kroz malo zaraslu stazu dok se ne zađe u šumu.
+Onda staza vrlo jasno ide uzbrdo kroz šumu.
+Staza gotovo sve vreme ide uzbrdo i prolazi kroz livade i šume.
+Do vrha ima oko 9.5km.
 
-{% include gpx-map.html gpx_file="./beljanica-kruzna-duza.gpx" %}
+Spust je standardnom stazom koja prolazi pored vidikovca kanjona Resave. Moguće je spustiti se i varijantom gde se ide kroz potok.
+
+{% include gpx-map-array.html map_id="beljanica-kruzna-duza" gpx_files="./beljanica-kruzna-duza.gpx" %}
+
+
