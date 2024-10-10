@@ -7,7 +7,7 @@
             <th>Vreme (h)</th>
             <th>Uspon (m)</th>
             <th>Datum</th>
-            <th>Link</th>
+            <th>GPX</th>
         </tr>
     </thead>
     <tbody>
@@ -83,7 +83,7 @@
         let linkCell = document.createElement('td');
         let link = document.createElement('a');
         link.href = url{{ forloop.index }};
-        link.textContent = 'GPX Fajl';
+        link.textContent = 'Preuzmi';
         link.target = '_blank';
         linkCell.appendChild(link);
         newRow.appendChild(linkCell);

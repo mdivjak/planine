@@ -17,7 +17,7 @@ bundle exec jekyll serve --livereload
 - [ ] prekontrolisi gpx zbog cudnih uspona
 - [x] kada su minuti trajanja manji od 10 ne ispisuje se nula 5:1 umesto 5:01
 - [ ] dodaj opise staza
-- [ ] dodaj navigaciju
-- [ ] dodaj uputstvo
-- [ ] dodaj resurse i korisne linkove
-- [x] todo
+- [x] dodaj navigaciju sajta
+- [x] dodaj uputstvo
+- [x] dodaj resurse i korisne linkove
+- [ ] dodaj slike 

@@ -37,6 +37,8 @@ Spust nema problematičnih deonica. Ide u par navrata kroz četinarsku šumu.
 
 ## Ježevac
 
-Uspon kreće od skretanja za selo Šetonje. Staza je u početku kamenita i strma, a posle prelazi u šumsku stazu koja je isto strma na momente. Sa vrha se odlično vidi Vukan. Spust je kroz šumu. I spust je strm, ali manje nego uspon. Staza se spušta do manastira Gornjak.
+Uspon kreće od skretanja za selo Šetonje. Staza je u početku kamenita i strma, a posle prelazi u šumsku stazu koja je na momente takođe strma. Sa vrha se odlično vidi Vukan. Spust je kroz šumu. I spust je strm, ali manje nego uspon. Staza se spušta do manastira Gornjak.
+
+Ako se ne ide sa dva automobila, može se spustiti drugom stazom od vrha koja ne ide preko kamenite strme staze.
 
 {% include gpx-map-array.html map_id="jezevac" gpx_files="./jezevac.gpx" %}
