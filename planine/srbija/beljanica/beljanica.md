@@ -19,9 +19,9 @@ Nakon toga staza nastavlja uzbrdo, ali malo manjim nagibom.
 
 ## Beljanica kružna kroz potok
 
-Ovaj gpx fajl kreće sa magistrale i ne završava tačno na istom mestu, ali može da se krene od vodopada i isprati deo iz gornjeg treka do vidikovca kanjona Resave.
+Ovaj GPX fajl kreće sa magistrale i ne završava tačno na istom mestu, ali može da se krene od vodopada gde je kraj treka i isprati deo iz gornjeg treka do vidikovca kanjona Resave.
 
-Staza se spušta do potoka i potrebno je snalaženja da se nađe tačno mesto za spuštanje sa grebena Beljanice. Kada sam išao ovom stazom bila je solidno zarasla dok se nismo približili potoku. Od potoka je staza samo pratila potok i bez većih problema smo nastavili i stigli do vodopada.
+Staza se spušta do potoka i potrebno je snalaženja da se nađe tačno mesto za spuštanje sa grebena Beljanice. Kada sam išao ovom stazom bila je solidno zarasla dok se nismo približili potoku. Od potoka je staza samo pratila potok i bez većih problema smo nastavili i stigli do vodopada. Mislim da voda iz potoka nije za piće.
 
 {% include gpx-map-array.html map_id="beljanica-potok" gpx_files="./beljanica-kroz-potok.gpx" %}
 
@@ -29,8 +29,8 @@ Staza se spušta do potoka i potrebno je snalaženja da se nađe tačno mesto za
 
 Ovo je najnapornija varijanta uspona na Beljanicu.
 Kreće od vodopada i ide do vrela.
-Potom se jednim kraćim delom ide kroz malo zaraslu stazu dok se ne zađe u šumu.
-Onda staza vrlo jasno ide uzbrdo kroz šumu.
+Potom se jednim kraćim delom ide kroz malo zaraslu stazu dok se ne zađe u šumu. Taj zarasli deo je nekih 5-10 minuta.
+Nakon toga staza vrlo jasno ide uzbrdo kroz šumu.
 Staza gotovo sve vreme ide uzbrdo i prolazi kroz livade i šume.
 Do vrha ima oko 9.5km.
 
