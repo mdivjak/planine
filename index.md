@@ -21,7 +21,7 @@ Staze su razvrstane po zemljama.
 1. [Povlen](planine/srbija/povlen/povlen)
 2. [Suvobor i Rajac](planine/srbija/suvobor-rajac/suvobor-rajac)
 3. [Tara](planine/srbija/tara/tara)
-4. Kablar - los gps signal
+4. [Kablar](planine/srbija/kablar/kablar)
 5. [Ovčar](planine/srbija/ovcar/ovcar)
 6. [Medvednik](planine/srbija/medvednik/medvednik)
 7. [Magleš](planine/srbija/magles/magles)
