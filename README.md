@@ -21,3 +21,7 @@ bundle exec jekyll serve --livereload
 - [x] dodaj uputstvo
 - [x] dodaj resurse i korisne linkove
 - [ ] dodaj slike 
+
+## Notes
+
+- useful includes [link](https://jekyllcodex.org/without-plugins/)
