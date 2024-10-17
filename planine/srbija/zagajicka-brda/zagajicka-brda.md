@@ -13,9 +13,7 @@ Letnji i zimski fajl prelaze istu stazu.
 Razlika je na samom početku - u zimskoj varijanti smo se malo probijali kroz zaraslu stazu jer nismo prepoznali kuda je staza prolazila.
 
 Treći GPX - "Zagajicka brda - jesen" prolazi malo izmenjenom rutom.
-Taj fajl je najskoriji i ne završava tačno kod starta.
-Staza je dosta zarasla u blizini starta.
-U fajlu se vidi da prati prethodne GPX fajlove, ali onda ide do naselja Grebenac par minuta od starta.
+Taj fajl je najskoriji i vraća se do starta kroz naselje, pošto je sam kraj bio zarastao i neprohodan.
 
 Najlepše je ići u proleće kada brda ozelene - sredina aprila i maj.
 Može biti naporno ako je vruće jer nema mnogo hlada.
