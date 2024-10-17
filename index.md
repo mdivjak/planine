@@ -2,6 +2,10 @@
 layout: default
 ---
 
+<!-- <div class="alert alert-warning">
+Sve informacije koristite na sopstvenu odgovornost.
+</div> -->
+
 Staze su razvrstane po zemljama.
 
 # Srbija
