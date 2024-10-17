@@ -2,6 +2,8 @@
 layout: default
 carousels:
     - images:
+      - image: zagajica-leti.jpg
+      - image: zagajica-dron.jpg
       - image: zagajica zimi.jpg
       - image: zagajica zimi2.jpg
       - image: zagajica zimi3.jpg
