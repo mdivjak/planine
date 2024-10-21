@@ -38,6 +38,8 @@ Staze su razvrstane po zemljama.
 3. [Beljanica](planine/srbija/beljanica/beljanica)
 4. [Rtanj](planine/srbija/rtanj/rtanj)
 5. [Stara planina](planine/srbija/stara-planina/stara-planina)
+6. [Tupižnica](planine/srbija/tupiznica/index)
+7. [Lazarev kanjon](planine/srbija/lazarev-kanjon/index)
 
 ## Južna Srbija
 
