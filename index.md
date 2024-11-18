@@ -30,6 +30,7 @@ Staze su razvrstane po zemljama.
 6. [Medvednik](planine/srbija/medvednik/medvednik)
 7. [Magleš](planine/srbija/magles/magles)
 8. [Kanjon Crne reke](planine/srbija/kanjon-crne-reke/kanjon-crne-reke)
+9. [Gradac](planine/srbija/gradac/index)
 
 ## Istočna Srbija
 
