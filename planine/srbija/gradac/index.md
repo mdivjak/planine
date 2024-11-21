@@ -4,7 +4,9 @@ layout: default
 
 # Gradac
 
-Staza kreće od parkinga kod kafe-a River u blizini Valjeva.
+**Start:** [Parking kod kafića River](https://maps.app.goo.gl/WqQC8vcNevoL6Vkd7)
+
+Staza kreće od parkinga kod kafića River u blizini Valjeva.
 
 Prvo ide malo asfaltnim putem, zatim makadamskim i onda postaje šumska planinarska staza.
 

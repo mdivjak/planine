@@ -13,6 +13,10 @@ Postoji nekoliko staza koje vode do vrha Vukana.
 
 ### Uspon iz sela Ždrelo
 
+**Start kod izviđačkog doma:** [lokacija](https://maps.app.goo.gl/8N1cDjGNPesh1Pn69)
+
+**Start kod manastira Ždrelo:** [lokacija](https://maps.app.goo.gl/Z1s8EHKS5eXNdnfM7)
+
 Staza kreće od izviđačkog doma u selu i ide kroz šumu do vrha.
 Druga staza kreće od manastira Ždrelo.
 Sam vrh je bez drveća - kamenita livada.
@@ -20,6 +24,8 @@ Ako se ide od izviđačkog doma, od Velikog Vukana može da se produži do Malog
 Pre Malog Vukana se prolazi kroz lepu četinarsku šumu.
 
 ### Uspon od česme "4 lule"
+
+**Start:** [lokacija](https://maps.app.goo.gl/kzm6tA2mGFoPY14K8)
 
 Druga staza polazi od česme "4 lule" koja se nalazi pored magistrale kada se prođe Ždrelo i nastavi ka Gornjačkoj klisuri i manastiru Gornjak.
 Odatle postoji staza koja ide grebenom Vukana. Staza je kamenita i u početnom delu dosta strma. Posle inicijalnog uspona ide polako uzbrdo grebenom.
@@ -31,6 +37,8 @@ Nakon uspona, najbolje je spustiti se drugom stazom koja ide kroz šumu. Staza j
 
 ## Sumorovac
 
+**Start:** [Kod crkve](https://maps.app.goo.gl/o3ZHy8tLzsHktyZNA)
+
 Staza kreće od crkve malo izvan sela Bistrica.
 Penje se do Lukinog kamena i nastavlja ka Velikom Sumorovcu.
 Poslednji deo do vrha je zarastao (na mapi se vide 2 različite putanje).
@@ -40,6 +48,8 @@ Spust nema problematičnih deonica. Ide u par navrata kroz četinarsku šumu.
 {% include gpx-map-array.html map_id="sumorovac" gpx_files="./sumorovac-1.gpx,./sumorovac-2.gpx" %}
 
 ## Ježevac
+
+**Start:** [lokacija](https://maps.app.goo.gl/qDfQh7yJ4NBsCkki6)
 
 Uspon kreće od skretanja za selo Šetonje. Staza je u početku kamenita i strma, a posle prelazi u šumsku stazu koja je na momente takođe strma. Sa vrha se odlično vidi Vukan. Spust je kroz šumu. I spust je strm, ali manje nego uspon. Staza se spušta do manastira Gornjak.
 

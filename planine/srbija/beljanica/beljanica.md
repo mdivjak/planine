@@ -6,6 +6,10 @@ layout: default
 
 Beljanica je jedan od težih uspona u Srbiji.
 
+Start za sve staze je od istog mesta.
+
+**Start:** [Lokacija](https://maps.app.goo.gl/n9nk7pj8EZrkoG8p6)
+
 ## Beljanica napred nazad
 
 Najjednostavniji uspon je od restorana i vodopada Veliki buk.

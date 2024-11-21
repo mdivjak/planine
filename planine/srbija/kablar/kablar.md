@@ -4,6 +4,8 @@ layout: default
 
 # Kablar
 
+**Start:** [lokacija](https://maps.app.goo.gl/viExKSrjJDu8JQrx9)
+
 Staza mi se dosta dopala.
 
 U početku ide kroz šumu.

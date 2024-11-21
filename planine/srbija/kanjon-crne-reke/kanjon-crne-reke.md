@@ -4,6 +4,8 @@ layout: default
 
 # Kanjon Crne reke
 
+**Start:** [Domaćinstvo Obradović](https://maps.app.goo.gl/KqXsF3T5qHfDWYEr7)
+
 Ova staza je idealna u vrućim letnim danima.
 Počinje od domaćinstva Obradović.
 Pored domaćinstva ima delimilčno uređen prostor za kampovanje.
