@@ -4,6 +4,8 @@ layout: default
 
 # Magleš
 
+**Start:** [Železnička stanica Lastra](https://maps.app.goo.gl/toUdZLNVyz1GqAnLA)
+
 Staza kreće od železničke stanice Lastra posle Valjeva (kada se ide iz Beograda).
 Zgodno je što se do samog početka staze može doći vozom.
 

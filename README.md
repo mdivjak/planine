@@ -14,13 +14,15 @@ bundle exec jekyll serve --livereload
 
 - [x] dodaj datum treka
 - [ ] izmeni imena u gpx metadati
-- [ ] prekontrolisi gpx zbog cudnih uspona
+- [x] prekontrolisi gpx zbog cudnih uspona
 - [x] kada su minuti trajanja manji od 10 ne ispisuje se nula 5:1 umesto 5:01
-- [ ] dodaj opise staza
+- [ ] dodaj opise staza za Sloveniju
 - [x] dodaj navigaciju sajta
 - [x] dodaj uputstvo
 - [x] dodaj resurse i korisne linkove
-- [ ] dodaj slike 
+- [ ] dodaj slike
+- [ ] google SEO ?
+- [ ] sitemap.xml ?
 
 ## Notes
 

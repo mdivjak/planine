@@ -4,6 +4,8 @@ layout: default
 
 # Vujan
 
+**Start:** [lokacija](https://maps.app.goo.gl/4SCHrx56uirmGoVP7)
+
 Staza kreće od divlje deponije pored magistrale.
 Staza gotovo celim delom ide kroz šumu.
 Prolazi pored manastira Vujan.

@@ -6,6 +6,8 @@ layout: default
 
 ## Subra
 
+**Start:** [Napušteni motel Borići](https://maps.app.goo.gl/MKBrLp6syGE7W5Zk7)
+
 Postoji detaljan opis staze na blogu [Vrhovi Crne Gore - Subra](https://medium.com/vrhovi-crne-gore/subra-1-679-mnm-e90f46eb8f78)
 
 Start staze je kod oronulog motela Borići.

@@ -9,6 +9,8 @@ carousels:
 
 # Tupižnica
 
+**Start:** [Pošta u selu Bučje](https://maps.app.goo.gl/GuZmjSUdCBXfsCwFA)
+
 Staza kreće iz sela Bučje.
 Prvim delom ide makadamskim širokim putem.
 Potom zalazi u šumu i postaje strma zemljana šumska staza.

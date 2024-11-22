@@ -6,6 +6,8 @@ layout: default
 
 ## Veliki Međed (južni vrh)
 
+**Start:** [Parking kod Crnog jezera](https://maps.app.goo.gl/GGZpC6wCDgeCVjkf9)
+
 Staza kreće od Crnog jezera.
 
 Prvo smo išli u dolinu Velika kalica gde se nalazi crveni alpinistički bivak.
@@ -27,6 +29,8 @@ Za neku kraću varijantu, može se ići samo od Crnog jezera do katuna Lokvice. 
 
 ## Crvena greda i Jablan jezero
 
+**Start:** [lokacija](https://maps.app.goo.gl/mZbbFzEKFA1HQNvp7)
+
 Staza ide od proširenja na putu ka Momčilovom gradu.
 
 Može se ići i od Crnog jezera ali je to dosta dugačko ako bi se pela i Crvena greda.
@@ -41,6 +45,8 @@ Staza dalje vodi ka Crvenoj gredi. Nema opasnosti. Prati greben, ali ne ide prev
 
 ## Zminje i Barno jezero
 
+**Start:** [Parking kod Crnog jezera](https://maps.app.goo.gl/GGZpC6wCDgeCVjkf9)
+
 Lagana šetnja od Crnog jezera. Staza je celom dužinom prohodna i bezbedna.
 Barno jezero je lokva i staza je bila dosta natopljena vodom u tom delu.
 
@@ -48,7 +54,9 @@ Barno jezero je lokva i staza je bila dosta natopljena vodom u tom delu.
 
 ## Planinica
 
-Ovo je jedna od najlepših staza jer pruža poglede ka gotovo svim vrhovima Durmitora.
+**Start:** [lokacija](https://maps.app.goo.gl/S9CpVvLp8Srpf4Ji7)
+
+Ovo je jedna od najlepših staza jer sa vrha pruža poglede ka gotovo svim vrhovima Durmitora.
 Ipak, nije tako često posećena jer postoje viši vrhovi koji zvuče atraktivnije.
 
 Start je u blizini sela Bosača. Kad se prođe selo ide se makadamom do samog kraja.
@@ -63,6 +71,8 @@ Pogled sa vrha je prelep. Vide se Škrčka jezera, Bobotov kuk, Prutaš i drugi 
 
 ## Prutaš
 
+**Start:** [lokacija](https://maps.app.goo.gl/q5SvZ1mGVgLBVP14A)
+
 Staza kreće od Dobrog dola gde se nalazi proširenje i vidikovac za slikanje Sedla.
 
 Staza kreće strmo, ali ubrzo nastavlja umerenije po kraškim livadama i poljima. Potom ponovo ide dosta strmo do prevoja Škrčko ždrijelo. Tu postoji račvanje za spust do Škrčkih jezera i za nastavak uspona na Prutaš.
@@ -71,7 +81,9 @@ Staza ide popreko strmih livada. U jednom trenutku smo videli krdo divokoza u da
 
 Sa staze se pružaju pogledi na sve gromade u okolini.
 
-Pred vrh postoji jedan detalj koji je eksponiran i može biti strašan. Potreban je oprez pri prelasku.
+Pred vrh postoji jedan detalj koji je eksponiran i može biti strašan.
+Potreban je oprez pri prelasku.
+Staza nije jasno uočljiva.
 Pred vrh je staza dosta kamenita, ali sam vrh je prostran, bezbedan i prekriven livadom. Postoji upisna knjiga i pečat.
 
 Ako se produži još malo napred i spusti sa vrha, dolazi se do vidikovca gde se mogu videti Škrčka jezera.
@@ -79,6 +91,8 @@ Ako se produži još malo napred i spusti sa vrha, dolazi se do vidikovca gde se
 {% include gpx-map-array.html map_id="prutas" gpx_files="./durmitor-prutas.gpx" %}
 
 ## Škrčka jezera od Sušičkog jezera
+
+**Start:** [lokacija](https://maps.app.goo.gl/zmzoYjnZQ3SjxuFPA)
 
 Staza kreće od planinarskog doma kod Sušičkog jezera.
 Ide ravno i veoma je uočljiva.
@@ -95,13 +109,19 @@ Kupali smo se u Velikom Škrčkom jezeru i vratili istim putem.
 
 ## Bandijerna
 
+**Start:** [lokacija](https://maps.app.goo.gl/fshy3gcoDcTU5PSq9)
+
 Staza kreće od proširenja kod Sedla.
 Odavde kreće i uspon na najviši vrh Durmitora, Bobotov kuk.
+Obično se tu nalazi rendžer da naplati ulaznice za park.
 
 Staza ide preko livada i dolazi do Uvite grede.
-U tom delu postoji sajla. Staza nije strašna, iako je obezbeđena sajlom.
+U tom delu postoji sajla.
+Staza nije strašna, iako je obezbeđena sajlom.
+Prvih 10 metara je poput penjanja uz merdevine, nakon toga je ravno do završetka sajle.
+Nakon sajle staza ide uzbrdo, ali nije eksponirana.
 
-Staza prati put ka Bobotovom kuku, ali se u jednom trenutku odvaja i ide ka Trojnom prevoju.
+Ubrzo staza postaje ravna i prati put ka Bobotovom kuku, ali se u jednom trenutku odvaja i ide ka Trojnom prevoju.
 To odvajanje nije jasno označeno tako da smo skrenuli sa staze, ali prilikom spusta smo prošli označenom stazom.
 To se vidi u GPX fajlu i na to treba obratiti pažnju.
 
@@ -110,8 +130,9 @@ Trojni prevoj je zaravan gde se može napraviti pauza.
 
 Od Trojnog prevoja nema jasno definisane staze.
 Pratili smo utabanu stazu i GPX fajl ali su se na momente mimoilazili.
-Staza je strma, i ima kamenja tako da treba biti pažljiv da se kamen ne obruši na nekoga.
+Staza je strma, i ima kamenja tako da treba biti pažljiv da se kamen ne obruši na nekoga ispod.
 
-Vrh je prostran, travnat i bezbedan. Pruža se pogled na sve strane Durmitora.
+Vrh je prostran, travnat i bezbedan.
+Pruža se pogled na sve strane Durmitora.
 
 {% include gpx-map-array.html map_id="bandijerna" gpx_files="./durmitor-bandijerna.gpx" %}

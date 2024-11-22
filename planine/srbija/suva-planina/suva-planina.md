@@ -4,6 +4,10 @@ layout: default
 
 # Suva planina
 
+## Trem od Bojaninih voda
+
+**Start:** [lokacija](https://maps.app.goo.gl/nNBZEGeWFG5ByekE8)
+
 Staza kreće od Bojaninih voda.
 Put je u dosta lošem stanju poslednjih nekoliko kilometara.
 Na startu staze je bilo dosta razbacanog smeća.
@@ -13,6 +17,8 @@ Staza je jasno obeležena i lako se prati, bez skretanja i raskrsnica, vodi prav
 {% include gpx-map-array.html map_id="trem" gpx_files="./trem-bojanine-vode.gpx" %}
 
 ## Kampovanje na Pasarelu
+
+**Start:** [Manastir Svetog Dimitrija](https://maps.app.goo.gl/BNXv6QZRDnuwiJti7)
 
 Ovo je bilo moje prvo kampovanje na planini gde smo nosili svu opremu sa sobom.
 Namera nam je bila da vidimo da li smo spremni za Highlander.

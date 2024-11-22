@@ -4,6 +4,8 @@ layout: default
 
 # Povlen
 
+**Start:** [Planinarski dom Povlen](https://maps.app.goo.gl/TDXvH8SDs8hfUvh4A)
+
 Zimi smo kretali od magistrale jer je put kroz selo makadamski i bilo je snega.
 Kada nema snega, kolima može da se dođe do planinarskog doma.
 Povlen ima tri vrha - Mali, Srednji i Veliki Povlen.

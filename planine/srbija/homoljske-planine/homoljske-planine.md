@@ -37,7 +37,7 @@ Nakon uspona, najbolje je spustiti se drugom stazom koja ide kroz šumu. Staza j
 
 ## Sumorovac
 
-**Start:** [Kod crkve](https://maps.app.goo.gl/o3ZHy8tLzsHktyZNA)
+**Start:** [lokacija](https://maps.app.goo.gl/o3ZHy8tLzsHktyZNA)
 
 Staza kreće od crkve malo izvan sela Bistrica.
 Penje se do Lukinog kamena i nastavlja ka Velikom Sumorovcu.

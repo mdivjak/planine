@@ -11,6 +11,8 @@ carousels:
 
 # Zagajička brda
 
+**Start:** [lokacija](https://maps.app.goo.gl/EAw14xAPwVMoZDCJ7)
+
 Letnji i zimski fajl prelaze istu stazu.
 Razlika je na samom početku - u zimskoj varijanti smo se malo probijali kroz zaraslu stazu jer nismo prepoznali kuda je staza prolazila.
 

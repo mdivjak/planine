@@ -4,6 +4,8 @@ layout: default
 
 # Medvednik
 
+**Start:** [Kod Planinarskog doma Krušik](https://maps.app.goo.gl/qEJi2n62FJm1UDaWA)
+
 Staza kreće od planinarskog doma koji je na veoma lepoj lokaciji.
 Ima prostora i da se kampuje, ali ne znam da li se to praktikuje.
 Put kroz selo je malo uzak, strm i makadamski.

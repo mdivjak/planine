@@ -4,6 +4,8 @@ layout: default
 
 # Lazarev kanjon
 
+**Start:** [Kod Lazareve pećine](https://maps.app.goo.gl/EbJsm6Kse9oszYtj6)
+
 Lazarev kanjon je jedno od najvećih staništa poskoka u Evropi.
 Zbog toga se obilazi isključivo u jesen.
 

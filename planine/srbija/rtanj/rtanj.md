@@ -4,6 +4,10 @@ layout: default
 
 # Rtanj
 
+**Start jug:** [lokacija](https://maps.app.goo.gl/X8r7rtjjMCJFUyjT9)
+
+**Start sever:** [lokacija](https://maps.app.goo.gl/QX73nebDHxxM4LUK7)
+
 Rtanj se najčešće penje sa južne strane.
 Ta staza kreće iz sela Rtanj u blizini hotela Ramonda.
 Prvim delom ide kroz šumu, a onda izlazi na čistinu i penje se do vrha golim livadama bez hlada. Nema nekih delova gde može da se zaluta, staza ide pravo do vrha i nazad.

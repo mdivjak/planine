@@ -4,6 +4,8 @@ layout: default
 
 # Miroč
 
+**Start:** [lokacija](https://maps.app.goo.gl/g3M1FznAeDbVGXDc6)
+
 Oba fajla prelaze istu stazu.
 
 Staza kreće od proširenja pored magistrale gde postoji česma za vodu.

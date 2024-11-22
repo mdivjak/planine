@@ -6,6 +6,8 @@ layout: default
 
 ## Šanik tvrđava
 
+**Start:** [lokacija](https://maps.app.goo.gl/EXMwg6xpKvga2YBB9)
+
 Put do starta staze ide serpentinama iznad Risna koje su većim delom asfaltirane.
 Poslednji deo vožnje (otprilike 2km) je makadam za koji je potreban terenac. Sa strane puta je neobezbeđena litica i nije prijatno za vožnju.
 
@@ -20,7 +22,8 @@ Objasnio nam je kuda da nastavimo da dođemo do tvrđave.
 
 Staza nije više išla uz liticu. Nastavili smo i posle oko 30min došli do tvrđave.
 
-Tvrđava je dosta urušena. Preciznost kojom su izgrađeni zidovi je veoma impresivna. Kamen je neverovatno precizno i uredno oblikovan i slagan.
+Tvrđava je dosta urušena. Preciznost kojom su izgrađeni zidovi je veoma impresivna.
+Kamen je neverovatno precizno i uredno oblikovan i slagan.
 Pružao se prelep pogled u svim pravcima.
 
 Vratili smo se istim putem nazad.

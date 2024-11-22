@@ -4,6 +4,8 @@ layout: default
 
 # Rudnik
 
+**Start:** [lokacija](https://maps.app.goo.gl/vLTwppeYKSkAuz5W8)
+
 Dugo sam oklevao da idem na Rudnik misleći da nije naročito zanimljiv.
 Međutim, ukazala se zanimljiva prilika kada je neočekivano u aprilu pao sneg.
 
