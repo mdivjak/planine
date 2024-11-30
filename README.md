@@ -13,6 +13,7 @@ bundle exec jekyll serve --livereload
 ## Todo
 
 - [x] dodaj datum treka
+- [x] dodaj novosti na pocetnoj stranici
 - [ ] izmeni imena u gpx metadati
 - [x] prekontrolisi gpx zbog cudnih uspona
 - [x] kada su minuti trajanja manji od 10 ne ispisuje se nula 5:1 umesto 5:01

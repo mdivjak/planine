@@ -6,7 +6,11 @@ layout: default
 Sve informacije koristite na sopstvenu odgovornost.
 </div> -->
 
-Staze su razvrstane po zemljama.
+## Novosti
+
+- **17.11.2024.** Novi trek - Gradac
+- **20.10.2024.** Novi trek - Lazarev kanjon
+- **19.10.2024.** Novi trek - Tupižnica
 
 # Srbija
 
