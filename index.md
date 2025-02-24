@@ -8,6 +8,7 @@ Sve informacije koristite na sopstvenu odgovornost.
 
 ## Novosti
 
+- **23.02.2025.** Novi trek - Fruška gora Vrdnik
 - **17.11.2024.** Novi trek - Gradac
 - **20.10.2024.** Novi trek - Lazarev kanjon
 - **19.10.2024.** Novi trek - Tupižnica
