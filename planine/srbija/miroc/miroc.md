@@ -14,8 +14,11 @@ Staza je izuzetno lepa.
 Prolazi pored par kuća.
 Jedna kuća je imala pse koji su bili poprilično glasni, ali nisu bili agresivni.
 Samo smo polako prošli pored njih.
-Posle nekih 40ak minuta smo naišli na drugu kuću koja je imala par ogromnih šar planinaca koji su bili veoma agresivni, ali na sreću i vezani.
+
+Kada smo prolazili u martu 2024. posle nekih 40ak minuta smo naišli na drugu kuću koja je imala par ogromnih šar planinaca koji su bili veoma agresivni, ali na sreću i vezani.
 Vlasnici su ih smirili da bismo mogli da prođemo pored kuće.
+
+Kada smo prolazili u martu 2025. nije bilo nikakvih šar planinaca pored te kuće. 
 
 Prošli smo i pored par urušenih starih kuća. Kroz srušene zidove su se videle slike ljudi koji su nekada tu živeli.
 
