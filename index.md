@@ -8,6 +8,7 @@ Sve informacije koristite na sopstvenu odgovornost.
 
 ## Novosti
 
+- **21.06.2025.** Novi trek - [Prokletije: Popadija - Talijanka - Volušnica](planine/crna-gora/prokletije/prokletije)
 - **23.02.2025.** Novi trek - Fruška gora Vrdnik
 - **17.11.2024.** Novi trek - Gradac
 - **20.10.2024.** Novi trek - Lazarev kanjon
@@ -62,6 +63,7 @@ Sve informacije koristite na sopstvenu odgovornost.
 1. [Durmitor](planine/crna-gora/durmitor/durmitor)
 2. [Orjen](planine/crna-gora/orjen/orjen)
 3. [Šanik tvrđava](planine/crna-gora/boka-kotorska/boka-kotorska)
+4. [Prokletije](planine/crna-gora/prokletije/prokletije)
 
 # Slovenija
 
