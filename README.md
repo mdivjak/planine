@@ -28,3 +28,7 @@ bundle exec jekyll serve --livereload
 ## Notes
 
 - useful includes [link](https://jekyllcodex.org/without-plugins/)
+
+## Sanitization
+
+To sanitize the gpx files you can remove the <extensions> with VS Code Find & Replace using regex `\s*<extensions>[\s\S]*?</extensions>\n`
