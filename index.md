@@ -8,6 +8,8 @@ Sve informacije koristite na sopstvenu odgovornost.
 
 ## Novosti
 
+- **29.09.2026.** Novi trek - [Prokletije: Hridsko jezero](planine/crna-gora/prokletije/prokletije)
+- **28.09.2026.** Novi trek - [Prokletije: Čakor - Veliki Starac](planine/crna-gora/prokletije/prokletije)
 - **30.11.2025** Novi trekovi - [Stara planina - Tri čuke i Ponor](planine/srbija/stara-planina/stara-planina)
 - **21.06.2025.** Novi trek - [Prokletije: Popadija - Talijanka - Volušnica](planine/crna-gora/prokletije/prokletije)
 
