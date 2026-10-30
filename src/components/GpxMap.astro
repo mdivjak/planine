@@ -1,0 +1,124 @@
+---
+import 'leaflet/dist/leaflet.css';
+import { withBase } from '../utils/hikes';
+
+interface Track {
+  src: string;
+  label: string;
+  color: string;
+}
+
+interface Props {
+  tracks: Track[];
+  title?: string;
+  id?: string;
+}
+
+const { tracks, title = 'GPX trag ture', id } = Astro.props;
+const resolvedTracks = tracks.map((track) => ({ ...track, src: withBase(track.src) }));
+const mapId = id ?? `map-${Astro.url.pathname.replace(/\W/g, '')}`;
+---
+
+<section
+  class="map-shell"
+  aria-labelledby={`${mapId}-title`}
+>
+  <div class="map-heading">
+    <div>
+      <span class="eyebrow">Navigacija</span>
+      <h2 id={`${mapId}-title`}>{title}</h2>
+    </div>
+    <div class="map-heading-actions">
+      <p>Interaktivni prikaz lokalnih GPX datoteka na OpenStreetMap podlozi.</p>
+    </div>
+  </div>
+  <div class="map" data-gpx-map data-tracks={JSON.stringify(resolvedTracks)}>
+    <p class="map-status" role="status">Učitavanje GPX fajla…</p>
+  </div>
+</section>
+
+<script>
+  import { initialiseGpxMaps } from '../scripts/gpx-map';
+
+  initialiseGpxMaps();
+  document.addEventListener('astro:page-load', initialiseGpxMaps);
+</script>
+
+<style>
+  .map-shell {
+    margin-top: 4rem;
+  }
+
+  .map-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .map-heading h2 {
+    margin-bottom: 0;
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  .map-heading-actions {
+    max-width: 380px;
+    text-align: right;
+  }
+
+  .map-heading-actions p {
+    margin-bottom: 0;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+  }
+
+  .map {
+    position: relative;
+    z-index: 0;
+    height: min(62vh, 35rem);
+    min-height: 24rem;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: #dce3db;
+    box-shadow: var(--shadow);
+  }
+
+  .map-status {
+    position: absolute;
+    z-index: 1000;
+    top: 1rem;
+    left: 50%;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.5rem;
+    background: white;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+    font-size: 0.8rem;
+    transform: translateX(-50%);
+  }
+
+  .map-status.has-error {
+    color: #7d241f;
+    background: #fff3ef;
+  }
+
+  @media (max-width: 680px) {
+    .map-heading {
+      display: block;
+    }
+
+    .map-heading-actions {
+      margin-top: 1rem;
+      text-align: left;
+    }
+
+    .map-heading-actions p {
+      margin-top: 1rem;
+    }
+
+    .map {
+      min-height: 22rem;
+    }
+  }
+</style>

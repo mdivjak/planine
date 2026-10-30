@@ -1,0 +1,68 @@
+---
+import { withBase } from '../utils/hikes';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  description?: string;
+  image?: string;
+}
+
+const { eyebrow, title, description, image = '/images/hero-ridges.svg' } = Astro.props;
+---
+
+<header class="page-hero" style={`--hero: url('${withBase(image)}')`}>
+  <div class="container">
+    <span class="eyebrow">{eyebrow}</span>
+    <h1>{title}</h1>
+    {description && <p>{description}</p>}
+  </div>
+</header>
+
+<style>
+  .page-hero {
+    position: relative;
+    display: grid;
+    min-height: 31rem;
+    padding: 10rem 0 5rem;
+    align-items: end;
+    overflow: hidden;
+    color: white;
+    background:
+      linear-gradient(90deg, rgba(15, 40, 33, 0.9), rgba(15, 40, 33, 0.25)),
+      var(--hero) center / cover;
+  }
+
+  .page-hero::after {
+    position: absolute;
+    right: -8vw;
+    bottom: -8rem;
+    width: 24rem;
+    height: 24rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    content: '';
+  }
+
+  .page-hero .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .page-hero .eyebrow {
+    color: var(--lime);
+  }
+
+  h1 {
+    max-width: 900px;
+    margin-bottom: 1rem;
+    font-size: clamp(3.2rem, 9vw, 6rem);
+  }
+
+  p {
+    max-width: 650px;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 1.1rem;
+  }
+</style>

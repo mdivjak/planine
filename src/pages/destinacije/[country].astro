@@ -1,0 +1,65 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import HikeCard from '../../components/HikeCard.astro';
+import { connectHikes, countrySummaries, type HikeRecord } from '../../utils/hikes';
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  const hikes = await getCollection('hikes');
+  const records = connectHikes(hikes, guides);
+  const countries = [...new Set(guides.map((guide) => guide.data.countrySlug))];
+  return countries.map((country) => ({
+    params: { country },
+    props: {
+      records: records.filter((record) => record.guide.data.countrySlug === country),
+    },
+  }));
+}
+
+interface Props {
+  records: HikeRecord[];
+}
+
+const { records } = Astro.props as Props;
+const countrySlug = Astro.params.country as string;
+const country = countrySummaries[countrySlug];
+const heroImage = records[0]?.guide.data.cover;
+---
+
+<BaseLayout title={`${country.title} | Planine`} description={country.description} image={heroImage}>
+  <PageHero
+    eyebrow={country.eyebrow}
+    title={country.title}
+    description={country.description}
+    image={heroImage}
+  />
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">{records.length} {records.length === 1 ? 'tura' : 'ture'}</span>
+          <h2>Beleške sa staze</h2>
+        </div>
+      </div>
+      <div class="hike-grid">
+        {records.map((record) => <HikeCard record={record} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hike-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 700px) {
+    .hike-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

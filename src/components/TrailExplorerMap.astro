@@ -1,0 +1,448 @@
+---
+import 'leaflet/dist/leaflet.css';
+import type { HikeRecord } from '../utils/hikes';
+import { hikePath, withBase } from '../utils/hikes';
+
+interface Props {
+  records: HikeRecord[];
+}
+
+const { records } = Astro.props;
+const palette = ['#d56a42', '#3f735e', '#416b8b', '#93616b', '#7965a5', '#b2822f', '#2d7777'];
+const explorerHikes = records.map((record, index) => ({
+  id: record.hike.id,
+  title: record.hike.data.title,
+  mountain: record.guide.data.mountain,
+  country: record.guide.data.country,
+  href: withBase(hikePath(record)),
+  color: palette[index % palette.length],
+  trailhead: record.hike.data.trailhead,
+  tracks: record.hike.data.gpxTracks.map((track) => ({
+    ...track,
+    src: withBase(track.src),
+  })),
+}));
+---
+
+<section
+  class="explorer"
+  aria-labelledby="explorer-title"
+  data-trail-explorer
+  data-hikes={JSON.stringify(explorerHikes)}
+>
+  <div class="explorer-heading">
+    <div>
+      <span class="eyebrow">Istraži po lokaciji</span>
+      <h2 id="explorer-title">Polazišta na mapi</h2>
+    </div>
+    <p>
+      Mapa počinje u Srbiji i prikazuje polazište svake pojedinačne ture. Izaberi marker da učitaš
+      GPX rutu.
+    </p>
+  </div>
+
+  <div class="explorer-map-shell">
+    <div
+      class="overview-map"
+      data-explorer-map
+      aria-label="Interaktivna mapa planinarskih polazišta"
+    ></div>
+
+    <div class="selection-panel" data-selection-panel hidden>
+      <div class="selection-info">
+        <p data-explorer-status role="status" aria-live="polite"></p>
+        <div class="selection-links">
+          <span>Preuzmi GPX:</span>
+          <div data-selected-downloads></div>
+          <a data-selected-detail>Detalji ture ↗</a>
+        </div>
+      </div>
+      <div class="selection-actions">
+        <button type="button" data-route-visibility aria-pressed="false" disabled>
+          Trag se učitava…
+        </button>
+        <button type="button" data-explorer-reset>Ukloni izbor i vrati mapu na Srbiju</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="trail-list" aria-label="Pojedinačne ture na mapi">
+    {
+      explorerHikes.map((hike) => (
+        <article style={`--hike-color: ${hike.color}`}>
+          <button type="button" data-hike-select={hike.id} aria-pressed="false">
+            <i aria-hidden="true"></i>
+            <span>
+              <strong>{hike.title}</strong>
+              <small>{hike.trailhead.label}</small>
+            </span>
+            <em>Prikaži trag</em>
+          </button>
+          <a href={hike.href} aria-label={`Otvori detalje ture ${hike.title}`}>Detalji ↗</a>
+        </article>
+      ))
+    }
+  </div>
+</section>
+
+<script>
+  import { initialiseTrailExplorers } from '../scripts/gpx-map';
+
+  initialiseTrailExplorers();
+  document.addEventListener('astro:page-load', initialiseTrailExplorers);
+</script>
+
+<style>
+  .explorer {
+    padding-top: clamp(4rem, 8vw, 7rem);
+  }
+
+  .explorer-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .explorer-heading h2 {
+    margin-bottom: 0;
+  }
+
+  .explorer-heading p {
+    max-width: 470px;
+    margin-bottom: 0;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+  }
+
+  .overview-map {
+    position: relative;
+    z-index: 0;
+    height: min(65vh, 35rem);
+    min-height: 27rem;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: #dce3db;
+    box-shadow: var(--shadow);
+  }
+
+  .explorer-map-shell {
+    position: relative;
+  }
+
+  .explorer-map-shell:has(.selection-panel:not([hidden])) .overview-map {
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+
+  .selection-panel {
+    display: flex;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--line);
+    border-top: 0;
+    border-radius: 0 0 0.9rem 0.9rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: var(--paper);
+  }
+
+  .selection-panel p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 0.78rem;
+  }
+
+  .selection-panel p.has-error {
+    color: #8a2f28;
+  }
+
+  .selection-info {
+    display: grid;
+    gap: 0.45rem;
+    min-width: 0;
+  }
+
+  .selection-links,
+  .selection-links > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 0.65rem;
+  }
+
+  .selection-links > span {
+    color: var(--ink-soft);
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .selection-links a {
+    color: var(--moss);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-underline-offset: 3px;
+  }
+
+  .selection-links [download] {
+    padding: 0.18rem 0.45rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--cream);
+    text-decoration: none;
+  }
+
+  .selection-links [download]:hover,
+  .selection-links [download]:focus-visible {
+    border-color: var(--fern);
+  }
+
+  .selection-actions {
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.45rem 1rem;
+  }
+
+  .selection-panel button {
+    flex: 0 0 auto;
+    padding: 0;
+    border: 0;
+    color: var(--moss);
+    background: transparent;
+    font: inherit;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+  }
+
+  .selection-panel button:disabled {
+    color: var(--ink-soft);
+    cursor: not-allowed;
+    opacity: 0.65;
+  }
+
+  .selection-panel button[data-route-state='loading'] {
+    cursor: wait;
+  }
+
+  .trail-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.7rem;
+    margin-top: 1rem;
+  }
+
+  .trail-list article {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 0.8rem;
+    background: var(--paper);
+  }
+
+  .trail-list article:has(button[aria-pressed='true']) {
+    border-color: var(--hike-color);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--hike-color) 18%, transparent);
+  }
+
+  .trail-list button {
+    display: flex;
+    min-width: 0;
+    padding: 0.7rem;
+    border: 0;
+    align-items: center;
+    gap: 0.65rem;
+    color: var(--ink);
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .trail-list button:hover,
+  .trail-list button:focus-visible {
+    background: rgba(55, 93, 77, 0.07);
+  }
+
+  .trail-list i {
+    width: 0.45rem;
+    height: 2.35rem;
+    flex: 0 0 auto;
+    border-radius: 999px;
+    background: var(--hike-color);
+  }
+
+  .trail-list button > span {
+    display: grid;
+    min-width: 0;
+  }
+
+  .trail-list strong,
+  .trail-list small {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .trail-list strong {
+    font-size: 0.76rem;
+  }
+
+  .trail-list small {
+    color: var(--ink-soft);
+    font-size: 0.66rem;
+  }
+
+  .trail-list em {
+    display: none;
+    color: var(--moss);
+    font-size: 0.65rem;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .trail-list article > a {
+    display: grid;
+    padding: 0.7rem;
+    border-left: 1px solid var(--line);
+    place-items: center;
+    color: var(--moss);
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .trail-list article > a:hover,
+  .trail-list article > a:focus-visible {
+    background: rgba(55, 93, 77, 0.07);
+  }
+
+  :global(.trailhead-marker-shell),
+  :global(.trailhead-cluster-shell) {
+    border: 0;
+    background: transparent;
+  }
+
+  :global(.trailhead-marker-shell span) {
+    position: relative;
+    display: block;
+    width: 26px;
+    height: 26px;
+    border: 4px solid white;
+    border-radius: 50% 50% 50% 0;
+    background: var(--marker-color);
+    box-shadow: 0 3px 10px rgba(20, 45, 36, 0.35);
+    transform: rotate(-45deg);
+  }
+
+  :global(.trailhead-marker-shell span::after) {
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    content: '';
+    background: white;
+  }
+
+  :global(.trailhead-cluster-shell span) {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    border: 4px solid white;
+    border-radius: 50%;
+    place-items: center;
+    color: white;
+    background: var(--moss);
+    box-shadow: 0 4px 14px rgba(20, 45, 36, 0.35);
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  :global(.trailhead-popup) {
+    display: grid;
+    gap: 0.22rem;
+    min-width: 13rem;
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+
+  :global(.trailhead-popup strong) {
+    color: var(--ink);
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 1.05rem;
+  }
+
+  :global(.trailhead-popup span),
+  :global(.trailhead-popup small) {
+    color: var(--ink-soft);
+    font-size: 0.72rem;
+  }
+
+  :global(.trailhead-popup div) {
+    display: flex;
+    gap: 0.7rem;
+    margin-top: 0.5rem;
+  }
+
+  :global(.trailhead-popup button),
+  :global(.trailhead-popup a) {
+    padding: 0;
+    border: 0;
+    color: var(--moss);
+    background: transparent;
+    font: inherit;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 800px) {
+    .trail-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 650px) {
+    .explorer-heading {
+      display: block;
+    }
+
+    .explorer-heading p {
+      margin-top: 1rem;
+    }
+
+    .overview-map {
+      height: 23rem;
+      min-height: 23rem;
+    }
+
+    .selection-panel {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .selection-actions {
+      justify-content: flex-start;
+    }
+
+    .trail-list em {
+      display: block;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .trail-list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+</style>

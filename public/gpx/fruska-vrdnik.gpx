@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Planine Astro prototype" xmlns="http://www.topografix.com/GPX/1/1">
+  <trk><name>Vrdnik - Zmajevac</name><trkseg>
+    <trkpt lat="45.1235" lon="19.7914"><ele>210</ele></trkpt>
+    <trkpt lat="45.1320" lon="19.8032"><ele>286</ele></trkpt>
+    <trkpt lat="45.1428" lon="19.8125"><ele>354</ele></trkpt>
+    <trkpt lat="45.1516" lon="19.8218"><ele>412</ele></trkpt>
+    <trkpt lat="45.1589" lon="19.8308"><ele>457</ele></trkpt>
+    <trkpt lat="45.1504" lon="19.8410"><ele>389</ele></trkpt>
+    <trkpt lat="45.1380" lon="19.8282"><ele>305</ele></trkpt>
+    <trkpt lat="45.1235" lon="19.7914"><ele>210</ele></trkpt>
+  </trkseg></trk>
+</gpx>

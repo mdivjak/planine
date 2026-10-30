@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#17352c"/>
+  <circle cx="1000" cy="120" r="180" fill="none" stroke="#d8e28b" opacity=".25"/>
+  <path d="M0 540 220 315l148 122 195-260 191 247 123-134 323 250v90H0Z" fill="#375d4d"/>
+  <path d="M80 105h78M80 105v78" stroke="#e7a84b" stroke-width="5"/>
+  <text x="80" y="270" fill="#fffdf8" font-family="Georgia,serif" font-size="116">Planine</text>
+  <text x="84" y="340" fill="#d8e28b" font-family="Arial,sans-serif" font-size="28" letter-spacing="5">BELEŠKE SA STAZE</text>
+</svg>

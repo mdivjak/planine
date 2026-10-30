@@ -1,0 +1,412 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import GpxMap from '../../components/GpxMap.astro';
+import GpxDownloads from '../../components/GpxDownloads.astro';
+import PhotoGallery from '../../components/PhotoGallery.astro';
+import { formatDate, withBase } from '../../utils/hikes';
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  return guides.map((guide) => ({
+    params: { slug: guide.id.replace(/\.mdx?$/, '') },
+    props: { guide },
+  }));
+}
+
+interface Props {
+  guide: CollectionEntry<'guides'>;
+}
+
+const { guide } = Astro.props as Props;
+const hikes = (await getCollection('hikes'))
+  .filter((hike) => hike.data.guide.id === guide.id)
+  .sort((a, b) => a.data.sourceOrder - b.data.sourceOrder);
+const { Content: GuideContent } = await render(guide);
+const renderedHikes = await Promise.all(
+  hikes.map(async (hike) => {
+    const { Content } = await render(hike);
+    return { hike, Content };
+  }),
+);
+const mapGroups = Object.values(
+  hikes.reduce<
+    Record<
+      string,
+      {
+        key: string;
+        title: string;
+        hikes: CollectionEntry<'hikes'>[];
+      }
+    >
+  >((groups, hike) => {
+    groups[hike.data.mapGroup] ??= {
+      key: hike.data.mapGroup,
+      title: hike.data.mapGroupTitle,
+      hikes: [],
+    };
+    groups[hike.data.mapGroup].hikes.push(hike);
+    return groups;
+  }, {}),
+);
+const renderedHikesById = new Map(
+  renderedHikes.map(({ hike, Content }) => [hike.id, Content]),
+);
+const orderedHikes = mapGroups.flatMap((group) => group.hikes);
+const trackCount = hikes.reduce((total, hike) => total + hike.data.gpxTracks.length, 0);
+const localAreaCount = new Set(hikes.map((hike) => hike.data.localArea)).size;
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: guide.data.title,
+  description: guide.data.description,
+  dateModified: guide.data.date.toISOString(),
+  image: new URL(withBase(guide.data.cover), Astro.url.origin).href,
+  about: [guide.data.mountain, guide.data.region, guide.data.country],
+  hasPart: hikes.map((hike) => ({
+    '@type': 'TouristTrip',
+    name: hike.data.title,
+    url: `${Astro.url.href}#${hike.data.anchor}`,
+  })),
+};
+---
+
+<BaseLayout
+  title={`${guide.data.title} | Planine`}
+  description={guide.data.description}
+  image={guide.data.cover}
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  <header class="hike-hero" style={`--hero: url('${withBase(guide.data.cover)}')`}>
+    <div class="container hike-heading">
+      <nav aria-label="Putanja">
+        <a href={withBase('/#imenik')}>Ture</a>
+        <span aria-hidden="true">/</span>
+        <a href={withBase(`/destinacije/${guide.data.countrySlug}/`)}>{guide.data.country}</a>
+      </nav>
+      <span class="eyebrow">{guide.data.region} · {guide.data.mountain}</span>
+      <h1>{guide.data.title}</h1>
+      <p>{guide.data.description}</p>
+    </div>
+  </header>
+
+  <article class="section article">
+    <div class="container">
+      <dl id="tour-stats" class="stats" aria-label="Sadržaj planinskog vodiča">
+        <div><dt>Ture</dt><dd>{hikes.length}</dd></div>
+        <div><dt>GPX tragovi</dt><dd>{trackCount}</dd></div>
+        <div><dt>Lokalna područja</dt><dd>{localAreaCount}</dd></div>
+        <div><dt>Poslednja dopuna</dt><dd>{formatDate(guide.data.date)}</dd></div>
+      </dl>
+
+      <div class="guide-layout">
+        <div>
+          <div class="guide-intro prose">
+            <GuideContent />
+          </div>
+
+          <div class="route-groups">
+            {
+              mapGroups.map((group) => {
+                const tracks = group.hikes.flatMap((hike) =>
+                  hike.data.gpxTracks.map((track) => ({
+                    ...track,
+                    label:
+                      group.hikes.length > 1
+                        ? `${hike.data.title} — ${track.label}`
+                        : track.label,
+                  })),
+                );
+                return (
+                  <section class="route-map-group" aria-label={group.title}>
+                    <div class="route-list">
+                      {
+                        group.hikes.map((hike) => {
+                          const Content = renderedHikesById.get(hike.id)!;
+                          const details = [
+                            hike.data.distanceKm && `${hike.data.distanceKm} km`,
+                            hike.data.elevationM && `+${hike.data.elevationM} m`,
+                            hike.data.durationHours && `${hike.data.durationHours} h`,
+                            hike.data.gpxTracks.length > 1 && `${hike.data.gpxTracks.length} GPX`,
+                          ].filter(Boolean);
+
+                          return (
+                            <section id={hike.data.anchor} class="route-section" tabindex="-1">
+                              <header class="route-heading">
+                                <div>
+                                  <span class="eyebrow">{hike.data.localArea}</span>
+                                  <h2>
+                                    <a href={`#${hike.data.anchor}`}>{hike.data.title}</a>
+                                  </h2>
+                                </div>
+                                <div class="route-meta" aria-label="Osnovni podaci o turi">
+                                  {details.map((detail) => <span>{detail}</span>)}
+                                </div>
+                              </header>
+                              <div class="prose">
+                                <Content />
+                              </div>
+                              {hike.data.photos.length > 0 && (
+                                <PhotoGallery photos={hike.data.photos} title={hike.data.title} />
+                              )}
+                              <GpxDownloads tracks={hike.data.gpxTracks} />
+                            </section>
+                          );
+                        })
+                      }
+                    </div>
+                    <GpxMap tracks={tracks} title={group.title} id={`guide-map-${group.key}`} />
+                  </section>
+                );
+              })
+            }
+          </div>
+        </div>
+
+        <aside>
+          <span class="eyebrow">Vodič kroz planinu</span>
+          <p><strong>Planina</strong><br />{guide.data.mountain}</p>
+          <p><strong>Region</strong><br />{guide.data.region}, {guide.data.country}</p>
+          <p><strong>Obuhvaćene ture</strong><br />{hikes.length}</p>
+          <div class="route-links">
+            {orderedHikes.map((hike) => <a href={`#${hike.data.anchor}`}>{hike.data.title}</a>)}
+          </div>
+          <p class="warning">Informacije i GPX tragove koristite na sopstvenu odgovornost. Uslovi na stazi se menjaju.</p>
+        </aside>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .hike-hero {
+    position: relative;
+    display: grid;
+    min-height: 78vh;
+    padding: 11rem 0 5rem;
+    align-items: end;
+    color: white;
+    background:
+      linear-gradient(0deg, rgba(10, 33, 27, 0.9), rgba(10, 33, 27, 0.12) 70%),
+      var(--hero) center / cover;
+  }
+
+  .hike-heading {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hike-heading nav {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+  }
+
+  .hike-heading .eyebrow {
+    color: var(--lime);
+  }
+
+  .hike-heading h1 {
+    max-width: 1000px;
+    margin-bottom: 1rem;
+    font-size: clamp(3.2rem, 8vw, 6.5rem);
+  }
+
+  .hike-heading > p {
+    max-width: 650px;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1.12rem;
+  }
+
+  .article {
+    background: var(--paper);
+  }
+
+  .stats {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: -6.5rem 0 6rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--paper);
+    box-shadow: var(--shadow);
+    scroll-margin-top: 7rem;
+  }
+
+  .stats div {
+    padding: 1.3rem;
+    border-right: 1px solid var(--line);
+  }
+
+  .stats div:last-child {
+    border-right: 0;
+  }
+
+  dt {
+    color: var(--ink-soft);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  dd {
+    margin: 0.2rem 0 0;
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+  }
+
+  .guide-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 760px) minmax(220px, 300px);
+    gap: clamp(3rem, 8vw, 8rem);
+    justify-content: space-between;
+  }
+
+  .guide-intro:empty {
+    display: none;
+  }
+
+  .route-section {
+    padding-top: 2rem;
+    margin-top: 4rem;
+    border-top: 2px solid var(--ink);
+    outline: 0;
+    scroll-margin-top: 2rem;
+  }
+
+  .route-section:focus-visible {
+    border-color: var(--sun);
+  }
+
+  .route-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .route-heading h2 {
+    margin: 0.25rem 0 0;
+  }
+
+  .route-heading h2 a {
+    text-decoration: none;
+  }
+
+  .route-meta {
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.4rem;
+  }
+
+  .route-meta span {
+    padding: 0.3rem 0.55rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--ink-soft);
+    background: var(--cream);
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+
+  aside {
+    position: sticky;
+    top: 1.5rem;
+    align-self: start;
+    padding: 1.5rem;
+    border-top: 3px solid var(--sun);
+    background: var(--cream);
+    font-size: 0.88rem;
+  }
+
+  aside strong {
+    color: var(--ink);
+  }
+
+  .route-links {
+    display: grid;
+    gap: 0.45rem;
+    margin: 1.5rem 0;
+  }
+
+  .route-links a {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-underline-offset: 3px;
+  }
+
+  .warning {
+    padding-top: 1rem;
+    margin-bottom: 0;
+    border-top: 1px solid var(--line);
+    color: var(--ink-soft);
+  }
+
+  .route-map-group + .route-map-group {
+    margin-top: 5rem;
+  }
+
+  :global(.route-section .downloads) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  :global(.route-map-group .map-shell) {
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 1500px) {
+    .stats {
+      margin-top: -5.5rem;
+    }
+  }
+
+  @media (max-width: 850px) {
+    .stats {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: -5rem;
+    }
+
+    .stats div {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .guide-layout {
+      grid-template-columns: 1fr;
+    }
+
+    aside {
+      position: static;
+    }
+
+    .route-heading {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .route-meta {
+      justify-content: flex-start;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .stats {
+      grid-template-columns: 1fr;
+    }
+
+    .stats div {
+      border-right: 0;
+    }
+
+  }
+</style>

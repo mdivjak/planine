@@ -1,0 +1,74 @@
+---
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import { withBase } from '../utils/hikes';
+
+const page = await getEntry('pages', 'o-sajtu');
+if (!page) throw new Error('Nedostaje sadržaj stranice O sajtu.');
+const { Content } = await render(page);
+---
+
+<BaseLayout
+  title={`${page.data.title} | Planine`}
+  description={page.data.description}
+>
+  <PageHero
+    eyebrow="Zašto Planine"
+    title="Beleške koje bih voleo da sam imao."
+    description="Lična referenca za sledeći odlazak u planinu — i za prijatelje koji traže proverenu polaznu tačku."
+    image="/images/about.svg"
+  />
+  <section class="section">
+    <div class="container about-grid">
+      <div class="prose">
+        <span class="eyebrow">Priča</span>
+        <Content />
+        <a class="button" href={withBase('/#imenik')}>Pogledaj sve ture</a>
+      </div>
+      <aside>
+        <strong>Važna napomena</strong>
+        <p>
+          Sve informacije koristite na sopstvenu odgovornost. Pre polaska proverite prognozu,
+          stanje staze i sopstvenu opremu. Planina se menja brže od bilo kog teksta.
+        </p>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 740px) minmax(220px, 320px);
+    gap: clamp(3rem, 8vw, 8rem);
+    justify-content: space-between;
+  }
+
+  aside {
+    align-self: start;
+    padding: 2rem;
+    border-radius: var(--radius);
+    color: white;
+    background: var(--ink);
+  }
+
+  aside strong {
+    display: block;
+    margin-bottom: 0.6rem;
+    color: var(--lime);
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 1.5rem;
+  }
+
+  aside p {
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  @media (max-width: 760px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

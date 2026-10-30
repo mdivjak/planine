@@ -1,0 +1,192 @@
+---
+import { withBase } from '../utils/hikes';
+
+interface Track {
+  src: string;
+  label: string;
+  color: string;
+  distanceKm?: number;
+  elevationM?: number;
+  durationHours?: number;
+}
+
+interface Props {
+  tracks: Track[];
+}
+
+const { tracks } = Astro.props;
+const downloads = tracks.map((track) => {
+  const fileName = decodeURIComponent(track.src.split('/').pop() ?? 'planinarski-trag.gpx');
+  return {
+    ...track,
+    fileName,
+    href: withBase(track.src),
+  };
+});
+const formatTrackStats = (track: Track) =>
+  [
+    track.distanceKm && `${track.distanceKm} km`,
+    track.elevationM && `+${track.elevationM} m`,
+    track.durationHours && `${track.durationHours} h`,
+  ]
+    .filter(Boolean)
+    .join(' · ');
+---
+
+{
+  downloads.length > 0 && (
+    <section class="downloads" aria-labelledby="gpx-download-title">
+      <div>
+        <span class="eyebrow">Za navigaciju</span>
+        <h2 id="gpx-download-title">Preuzmi GPX</h2>
+        <p>Sačuvaj trag na telefonu ili GPS uređaju pre polaska. Svaka datoteka se preuzima zasebno.</p>
+      </div>
+      <ul>
+        {downloads.map((track) => (
+          <li style={`--track-color: ${track.color}`}>
+            <span>
+              <i aria-hidden="true"></i>
+              <span>
+                <strong>{track.label}</strong>
+                <small>{track.fileName}</small>
+                {formatTrackStats(track) && <small class="track-stats">{formatTrackStats(track)}</small>}
+              </span>
+            </span>
+            <a href={track.href} download={track.fileName} aria-label={`Preuzmi GPX trag ${track.label}`}>
+              Preuzmi <span aria-hidden="true">↓</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}
+
+<style>
+  .downloads {
+    display: grid;
+    grid-template-columns: minmax(14rem, 0.65fr) minmax(0, 1fr);
+    gap: clamp(2rem, 6vw, 6rem);
+    padding: 2rem;
+    margin-top: 4rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--cream);
+  }
+
+  h2 {
+    margin-bottom: 0.6rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  .downloads > div > p {
+    margin-bottom: 0;
+    color: var(--ink-soft);
+    font-size: 0.88rem;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  li {
+    display: flex;
+    min-height: 4.2rem;
+    padding: 0.7rem 0;
+    border-top: 1px solid var(--line);
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  li:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  li:last-child {
+    padding-bottom: 0;
+  }
+
+  li > span {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  li i {
+    width: 0.35rem;
+    height: 2.2rem;
+    flex: 0 0 auto;
+    border-radius: 999px;
+    background: var(--track-color);
+  }
+
+  li > span > span {
+    display: grid;
+    min-width: 0;
+  }
+
+  strong,
+  small {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .track-stats {
+    color: var(--fern);
+  }
+
+  strong {
+    font-size: 0.84rem;
+  }
+
+  small {
+    color: var(--ink-soft);
+    font-size: 0.7rem;
+  }
+
+  a {
+    display: inline-flex;
+    min-height: 2.4rem;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--ink);
+    border-radius: 999px;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--ink);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  a:hover,
+  a:focus-visible {
+    color: white;
+    background: var(--ink);
+  }
+
+  @media (max-width: 700px) {
+    .downloads {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 1.3rem;
+    }
+  }
+
+  @media (max-width: 440px) {
+    li {
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    a {
+      justify-content: center;
+    }
+  }
+</style>

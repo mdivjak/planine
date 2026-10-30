@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 950">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fa699"/>
+      <stop offset="0.55" stop-color="#d7d4bd"/>
+      <stop offset="1" stop-color="#f0c77c"/>
+    </linearGradient>
+    <linearGradient id="ridge" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#49695d"/>
+      <stop offset="1" stop-color="#17352c"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence baseFrequency=".8" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 .08 0"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="950" fill="url(#sky)"/>
+  <circle cx="1250" cy="220" r="84" fill="#f2d49c" opacity=".8"/>
+  <path d="M0 630 170 470l115 86 175-218 150 192 150-236 200 250 120-122 170 181 170-132 200 170v309H0Z" fill="#637c70" opacity=".55"/>
+  <path d="M0 700 220 560l170 92 190-218 210 248 180-190 150 162 210-226 270 240v282H0Z" fill="url(#ridge)"/>
+  <path d="M0 790c250-90 420-38 616 20 194 57 358 20 520-42 154-59 300-40 464 24v158H0Z" fill="#102b24"/>
+  <path d="M910 725c-70 42-109 87-132 135M911 725c64 37 99 78 112 126" fill="none" stroke="#d8e28b" stroke-width="7" stroke-linecap="round" opacity=".75"/>
+  <rect width="1600" height="950" filter="url(#grain)" opacity=".5"/>
+</svg>

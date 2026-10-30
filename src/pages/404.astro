@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import { withBase } from '../utils/hikes';
+---
+
+<BaseLayout title="Staza nije pronađena | Planine">
+  <PageHero
+    eyebrow="404 · Van markacije"
+    title="Ova staza ne vodi nikuda."
+    description="Stranica je pomerena ili nikada nije postojala. Vrati se na poznat teren."
+  />
+  <section class="section">
+    <div class="container"><a class="button" href={withBase('/')}>Nazad na početnu</a></div>
+  </section>
+</BaseLayout>

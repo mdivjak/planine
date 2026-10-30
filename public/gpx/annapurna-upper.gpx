@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Planine Astro prototype" xmlns="http://www.topografix.com/GPX/1/1">
+  <trk><name>Deurali - Annapurna Base Camp</name><trkseg>
+    <trkpt lat="28.4930" lon="83.8840"><ele>3200</ele></trkpt>
+    <trkpt lat="28.5100" lon="83.8780"><ele>3500</ele></trkpt>
+    <trkpt lat="28.5250" lon="83.8730"><ele>3700</ele></trkpt>
+    <trkpt lat="28.5355" lon="83.8702"><ele>4130</ele></trkpt>
+  </trkseg></trk>
+</gpx>
