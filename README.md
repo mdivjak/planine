@@ -6,7 +6,7 @@ Početna stranica odmah prikazuje kompletan imenik od 51 ture, grupisan po zemlj
 
 ## Pokretanje i provera
 
-Potreban je Node.js 20 ili noviji.
+Potreban je Node.js 24 ili noviji.
 
 ```sh
 npm install
