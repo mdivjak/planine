@@ -4,7 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import GpxMap from '../../components/GpxMap.astro';
 import GpxDownloads from '../../components/GpxDownloads.astro';
 import PhotoGallery from '../../components/PhotoGallery.astro';
-import { formatDate, withBase } from '../../utils/hikes';
+import { withBase } from '../../utils/hikes';
 
 export async function getStaticPaths() {
   const guides = await getCollection('guides');
@@ -53,8 +53,6 @@ const renderedHikesById = new Map(
   renderedHikes.map(({ hike, Content }) => [hike.id, Content]),
 );
 const orderedHikes = mapGroups.flatMap((group) => group.hikes);
-const trackCount = hikes.reduce((total, hike) => total + hike.data.gpxTracks.length, 0);
-const localAreaCount = new Set(hikes.map((hike) => hike.data.localArea)).size;
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
@@ -92,13 +90,6 @@ const structuredData = {
 
   <article class="section article">
     <div class="container">
-      <dl id="tour-stats" class="stats" aria-label="Sadržaj planinskog vodiča">
-        <div><dt>Ture</dt><dd>{hikes.length}</dd></div>
-        <div><dt>GPX tragovi</dt><dd>{trackCount}</dd></div>
-        <div><dt>Lokalna područja</dt><dd>{localAreaCount}</dd></div>
-        <div><dt>Poslednja dopuna</dt><dd>{formatDate(guide.data.date)}</dd></div>
-      </dl>
-
       <div class="guide-layout">
         <div>
           <div class="guide-intro prose">
@@ -221,44 +212,8 @@ const structuredData = {
   }
 
   .article {
+    padding-top: clamp(2rem, 4vw, 3.5rem);
     background: var(--paper);
-  }
-
-  .stats {
-    position: relative;
-    z-index: 2;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: -6.5rem 0 6rem;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    background: var(--paper);
-    box-shadow: var(--shadow);
-    scroll-margin-top: 7rem;
-  }
-
-  .stats div {
-    padding: 1.3rem;
-    border-right: 1px solid var(--line);
-  }
-
-  .stats div:last-child {
-    border-right: 0;
-  }
-
-  dt {
-    color: var(--ink-soft);
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  dd {
-    margin: 0.2rem 0 0;
-    font-family: 'Newsreader', Georgia, serif;
-    font-size: 1.35rem;
-    font-weight: 600;
   }
 
   .guide-layout {
@@ -270,6 +225,10 @@ const structuredData = {
 
   .guide-intro:empty {
     display: none;
+  }
+
+  .guide-intro:empty + .route-groups .route-section:first-child {
+    margin-top: 0;
   }
 
   .route-section {
@@ -365,28 +324,14 @@ const structuredData = {
     margin-top: 2rem;
   }
 
-  @media (max-width: 1500px) {
-    .stats {
-      margin-top: -5.5rem;
-    }
-  }
-
   @media (max-width: 850px) {
-    .stats {
-      grid-template-columns: repeat(2, 1fr);
-      margin-top: -5rem;
-    }
-
-    .stats div {
-      border-bottom: 1px solid var(--line);
-    }
-
     .guide-layout {
       grid-template-columns: 1fr;
     }
 
     aside {
       position: static;
+      order: -1;
     }
 
     .route-heading {
@@ -397,16 +342,5 @@ const structuredData = {
     .route-meta {
       justify-content: flex-start;
     }
-  }
-
-  @media (max-width: 500px) {
-    .stats {
-      grid-template-columns: 1fr;
-    }
-
-    .stats div {
-      border-right: 0;
-    }
-
   }
 </style>
