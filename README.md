@@ -154,6 +154,51 @@ photos:
 
 ## Mape i GPX
 
+### Provera dužine i uspona
+
+`data/route-metrics-review.csv` je radni pregled za Excel, LibreOffice ili Google Sheets,
+a ne novi izvor podataka za sajt. CSV koristi UTF-8 sa BOM oznakom, zarez kao separator
+i decimalnu tačku. Ako Excel ne podeli kolone automatski, koristi uvoz iz Text/CSV.
+
+Pregled obuhvata sve GPX datoteke iz `public/gpx/`, uključujući one koje nijedna tura
+ne koristi, kao i zaseban `hike` red za svaki sažetak ture. `track` red odgovara jednom
+zapisu u `gpxTracks`; `unassigned_track` nema objavljene metrike ni Markdown referencu.
+Trenutne vrednosti su prepisane iz frontmatter-a, nisu ponovo izračunate niti potvrđene.
+`elevationM` ovde znači kumulativni uspon u metrima, ne najvišu tačku ili neto razliku visine.
+
+Za proveru:
+
+1. Sačuvaj identifikatore (`record_type`, `markdown_path`, `gpx_path`) i `current_*` kolone neizmenjene.
+2. Upiši ispravke u `corrected_distance_km` i `corrected_elevation_gain_m`, bez jedinica;
+   prazna ispravka znači „zadrži postojeće“, ne nulu ili brisanje. Dužina je pozitivan
+   broj kilometara, a uspon ceo nenegativan broj metara (trenutna šema sažetka ture zahteva pozitivan uspon).
+3. Postavi `review_status` na `verified` kada je red proveren, čak i bez ispravki.
+   U `source` navedi izvor/metod provere, a u `notes` objašnjenje eventualne razlike.
+4. Vrati uređeni CSV da se ispravke primene na odgovarajući frontmatter. Samo uređivanje
+   CSV-a ne menja sajt niti koordinate u GPX datotekama; uvoz nije automatizovan.
+
+Proveri i sažetak i pojedinačne tragove: kod `single` obično treba da se slažu,
+kod `segments` sažetak predstavlja zbir uzastopnih deonica, a `variants` su alternative
+koje se **ne sabiraju**. Prazne trenutne metrike ostaju nepoznate dok se ne potvrde.
+Uspon zavisi od šuma visine i filtriranja, pa sirov zbir svih pozitivnih promena iz GPX-a
+nije nužno pouzdana referenca.
+
+Novi pregled trenutnog frontmatter-a može se izvesti komandom:
+
+```sh
+npm run export:metrics -- data/route-metrics-review-new.csv
+```
+
+Izvoz odbija prepisivanje postojećeg fajla da ne izgubi ručno proverene vrednosti.
+
+Trenutno su metrike duplirane u vrhu `hikes/*.md` zapisa i u njihovim `gpxTracks`
+stavkama. Sažeci ture koriste prve, a GPX preuzimanja druge; parser mape čita samo
+koordinate i ne računa dužinu ni uspon. Zbir deonica se ne preračunava automatski.
+Posle provere preporuka je jedan tipizovan centralni izvor metrika po stabilnoj GPX
+putanji, uz izvedene sažetke za `single` i `segments` i eksplicitnu politiku za
+`variants`. Opisi, fotografije i urednički sadržaj mogu ostati u Markdown-u.
+Ova provera još ne menja model sadržaja niti uvodi drugi aktivni izvor istine.
+
 `GpxMap.astro` i pregledna mapa dele parser iz `src/scripts/gpx-map.ts`:
 
 - lokalni GPX se parsira u pregledaču bez GPX plugina;

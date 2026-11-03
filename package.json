@@ -10,7 +10,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "validate:content": "node scripts/validate-content.mjs"
+    "validate:content": "node scripts/validate-content.mjs",
+    "export:metrics": "node scripts/export-metrics.mjs"
   },
   "dependencies": {
     "astro": "5.16.5",
@@ -19,7 +20,8 @@
   "devDependencies": {
     "@astrojs/check": "0.9.4",
     "@types/leaflet": "^1.9.21",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "yaml": "^2.8.1"
   },
   "overrides": {
     "@astrojs/language-server": "2.15.0",
