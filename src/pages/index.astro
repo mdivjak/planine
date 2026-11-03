@@ -55,15 +55,6 @@ const latest = records.slice(0, 3);
       <TrailExplorerMap records={records} />
     </div>
   </section>
-
-  <section class="manifesto">
-    <div class="container">
-      <span class="eyebrow">Odgovorno u prirodi</span>
-      <p>GPX je smernica, ne garancija.</p>
-      <p class="muted">Proveri vreme. Proceni sebe. Ostavi samo trag koraka.</p>
-      <a class="button button--light" href={withBase('/resursi/')}>Priprema za turu</a>
-    </div>
-  </section>
 </BaseLayout>
 
 <style>
@@ -200,32 +191,6 @@ const latest = records.slice(0, 3);
     font-weight: 700;
     text-decoration-color: var(--sun);
     text-underline-offset: 3px;
-  }
-
-  .manifesto {
-    padding: clamp(5rem, 10vw, 9rem) 0;
-    color: white;
-    text-align: center;
-    background: var(--ink);
-  }
-
-  .manifesto .eyebrow {
-    color: var(--lime);
-  }
-
-  .manifesto p {
-    margin-bottom: 0;
-    font-family: 'Newsreader', Georgia, serif;
-    font-size: clamp(2.5rem, 7vw, 5.8rem);
-    line-height: 1.05;
-  }
-
-  .manifesto .muted {
-    color: rgba(255, 255, 255, 0.36);
-  }
-
-  .manifesto .button {
-    margin-top: 2.5rem;
   }
 
   @media (max-width: 780px) {
