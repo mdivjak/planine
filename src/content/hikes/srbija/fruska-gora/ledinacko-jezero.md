@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2025-11-09
 featured: false
 sourceOrder: 3
-distanceKm: 13.93
-elevationM: 687
-durationHours: 5.62
-highestPointM: 504
 tags: ["Srbija","Vojvodina","Fruška gora","Ledinci","Ledinačko jezero"]
 trailhead:
   lat: 45.184079
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/srbija/fruska-gora/fruska-gora-4.gpx"
     label: "Fruska gora: Ledinačko jezero"
     color: "#93616b"
-    distanceKm: 13.93
-    elevationM: 687
-    durationHours: 5.62
-    highestPointM: 504
-    date: 2025-11-09
 ---
 
 **Start:** [lokacija](https://maps.app.goo.gl/EdbL1AEzFfPu79b78)

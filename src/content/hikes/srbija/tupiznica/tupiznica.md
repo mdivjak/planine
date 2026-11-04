@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2024-10-19
 featured: false
 sourceOrder: 0
-distanceKm: 12.93
-elevationM: 1198
-durationHours: 6.1
-highestPointM: 1164
 tags: ["Srbija","Istočna Srbija","Tupižnica"]
 trailhead:
   lat: 43.680871
@@ -33,11 +29,6 @@ gpxTracks:
   - src: "/gpx/archive/srbija/tupiznica/tupiznica.gpx"
     label: "Tupiznica"
     color: "#d56a42"
-    distanceKm: 12.93
-    elevationM: 1198
-    durationHours: 6.1
-    highestPointM: 1164
-    date: 2024-10-19
 ---
 
 **Start:** [Pošta u selu Bučje](https://maps.app.goo.gl/GuZmjSUdCBXfsCwFA)

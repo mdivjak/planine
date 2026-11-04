@@ -6,7 +6,7 @@ interface Track {
   label: string;
   color: string;
   distanceKm?: number;
-  elevationM?: number;
+  elevationGainM?: number;
   durationHours?: number;
 }
 
@@ -26,7 +26,7 @@ const downloads = tracks.map((track) => {
 const formatTrackStats = (track: Track) =>
   [
     track.distanceKm && `${track.distanceKm} km`,
-    track.elevationM && `+${track.elevationM} m`,
+    track.elevationGainM !== undefined && `+${track.elevationGainM} m`,
     track.durationHours && `${track.durationHours} h`,
   ]
     .filter(Boolean)

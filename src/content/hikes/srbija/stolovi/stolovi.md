@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2023-05-20
 featured: false
 sourceOrder: 0
-distanceKm: 16.9
-elevationM: 1774
-durationHours: 8.68
-highestPointM: 1375
 tags: ["Srbija","Južna Srbija","Stolovi"]
 trailhead:
   lat: 43.612027
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/srbija/stolovi/stolovi.gpx"
     label: "Trek Stolovi"
     color: "#d56a42"
-    distanceKm: 16.9
-    elevationM: 1774
-    durationHours: 8.68
-    highestPointM: 1375
-    date: 2023-05-20
 ---
 
 **Start:** [lokacija](https://maps.app.goo.gl/YuzWURLz6GYqGPhi9)

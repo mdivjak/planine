@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2026-09-29
 featured: true
 sourceOrder: 2
-distanceKm: 6.67
-elevationM: 773
-durationHours: 3.46
-highestPointM: 1985
 tags: ["Crna Gora","Prokletije","Hridsko jezero"]
 trailhead:
   lat: 42.595872
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/crna-gora/prokletije/hridsko-jezero.gpx"
     label: "Hridsko Jezero"
     color: "#416b8b"
-    distanceKm: 6.67
-    elevationM: 773
-    durationHours: 3.46
-    highestPointM: 1985
-    date: 2026-09-29
 ---
 
 **Start:** [Početna lokacija](https://maps.app.goo.gl/iDYjU6V6yS27KDfy5)

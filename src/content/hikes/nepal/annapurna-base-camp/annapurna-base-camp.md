@@ -10,10 +10,6 @@ trackMode: "segments"
 date: 2022-05-02
 featured: true
 sourceOrder: 0
-distanceKm: 70.68
-elevationM: 5726
-durationHours: 33.85
-highestPointM: 4143
 tags: ["Nepal","Annapurna","Annapurna Base Camp","Annapurna Sanctuary"]
 trailhead:
   lat: 28.359036
@@ -23,67 +19,27 @@ gpxTracks:
   - src: "/gpx/archive/nepal/annapurna-base-camp/dan1-siwai-jhinu-danda.gpx"
     label: "Dan 1 Siwai - Jhinu Danda"
     color: "#d56a42"
-    distanceKm: 8.75
-    elevationM: 761
-    durationHours: 3.86
-    highestPointM: 1907
-    date: 2022-04-25
   - src: "/gpx/archive/nepal/annapurna-base-camp/dan2-jhinu-danda-chhomrong.gpx"
     label: "Dan 2 Jhinu Danda - Chhomrong"
     color: "#3f735e"
-    distanceKm: 2
-    elevationM: 471
-    durationHours: 1.51
-    highestPointM: 2179
-    date: 2022-04-26
   - src: "/gpx/archive/nepal/annapurna-base-camp/dan3-chhomrong-dovan.gpx"
     label: "Dan 3 Chhomrong - Dovan"
     color: "#416b8b"
-    distanceKm: 11.04
-    elevationM: 1083
-    durationHours: 5.9
-    highestPointM: 2422
-    date: 2022-04-27
   - src: "/gpx/archive/nepal/annapurna-base-camp/dan4-dovan-deurali.gpx"
     label: "Dan 4 Dovan - Deurali"
     color: "#93616b"
-    distanceKm: 7.43
-    elevationM: 902
-    durationHours: 3.76
-    highestPointM: 3177
-    date: 2022-04-28
   - src: "/gpx/archive/nepal/annapurna-base-camp/dan5-deurali-abc.gpx"
     label: "Dan 5 Deurali - ABC"
     color: "#7965a5"
-    distanceKm: 7.63
-    elevationM: 1086
-    durationHours: 4.99
-    highestPointM: 4008
-    date: 2022-04-29
   - src: "/gpx/archive/nepal/annapurna-base-camp/dan6-abc-dovan.gpx"
     label: "Dan 6 ABC - Dovan"
     color: "#b2822f"
-    distanceKm: 12.79
-    elevationM: 267
-    durationHours: 4.9
-    highestPointM: 4143
-    date: 2022-04-30
   - src: "/gpx/archive/nepal/annapurna-base-camp/dan7-dovan-chhomrong.gpx"
     label: "Dan 7 Dovan - Chhomrong"
     color: "#2d7777"
-    distanceKm: 10.35
-    elevationM: 744
-    durationHours: 4.36
-    highestPointM: 2521
-    date: 2022-05-01
   - src: "/gpx/archive/nepal/annapurna-base-camp/dan8-chhomrong-siwai.gpx"
     label: "Dan 8 Chhomrong - Siwai"
     color: "#d56a42"
-    distanceKm: 10.69
-    elevationM: 412
-    durationHours: 4.57
-    highestPointM: 2210
-    date: 2022-05-02
 ---
 
 U aprilu 2022. sam išao na trek Annapurna Base Camp.

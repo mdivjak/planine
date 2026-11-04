@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2023-10-30
 featured: false
 sourceOrder: 4
-distanceKm: 9.65
-elevationM: 1166
-durationHours: 6.06
-highestPointM: 2414
 tags: ["Crna Gora","Durmitor","Dobri do","Prutaš"]
 trailhead:
   lat: 43.105949
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/crna-gora/durmitor/durmitor-prutas.gpx"
     label: "Trek Durmitor: Prutaš"
     color: "#b2822f"
-    distanceKm: 9.65
-    elevationM: 1166
-    durationHours: 6.06
-    highestPointM: 2414
-    date: 2023-10-30
 ---
 
 **Start:** [lokacija](https://maps.app.goo.gl/q5SvZ1mGVgLBVP14A)

@@ -10,10 +10,6 @@ trackMode: "segments"
 date: 2022-11-13
 featured: false
 sourceOrder: 0
-distanceKm: 28.82
-elevationM: 1650
-durationHours: 10.58
-highestPointM: 2143
 tags: ["Srbija","Istočna Srbija","Stara planina","Babin zub i Topli Do","Babin zub - Midžor - Topli do - Babin zub"]
 trailhead:
   lat: 43.37459
@@ -23,19 +19,9 @@ gpxTracks:
   - src: "/gpx/archive/srbija/stara-planina/babin-zub-midzor-topli-do.gpx"
     label: "Trek Babin Zub - Midzor - Topli Do"
     color: "#d56a42"
-    distanceKm: 16.85
-    elevationM: 698
-    durationHours: 6.11
-    highestPointM: 2143
-    date: 2022-11-12
   - src: "/gpx/archive/srbija/stara-planina/topli-do-babin-zub.gpx"
     label: "Trek Topli Do - Babin zub"
     color: "#3f735e"
-    distanceKm: 11.97
-    elevationM: 952
-    durationHours: 4.47
-    highestPointM: 1615
-    date: 2022-11-13
 ---
 
 **Start:** [lokacija](https://maps.app.goo.gl/nNeuCdBDuembCJgD7)

@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2024-02-16
 featured: false
 sourceOrder: 0
-distanceKm: 14.77
-elevationM: 1842
-durationHours: 8.88
-highestPointM: 1692
 tags: ["Crna Gora","Primorje","Orjen","Subra"]
 trailhead:
   lat: 42.493509
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/crna-gora/orjen/orjen-subra.gpx"
     label: "Trek Orjen - Subra"
     color: "#d56a42"
-    distanceKm: 14.77
-    elevationM: 1842
-    durationHours: 8.88
-    highestPointM: 1692
-    date: 2024-02-16
 ---
 
 **Start:** [Napušteni motel Borići](https://maps.app.goo.gl/MKBrLp6syGE7W5Zk7)

@@ -19,19 +19,9 @@ gpxTracks:
   - src: "/gpx/archive/srbija/zeljin/zeljin-jesen.gpx"
     label: "Trek Željin"
     color: "#d56a42"
-    distanceKm: 17.97
-    elevationM: 1204
-    durationHours: 6.55
-    highestPointM: 1760
-    date: 2021-11-28
   - src: "/gpx/archive/srbija/zeljin/zeljin-zima.gpx"
     label: "Trek Zeljin"
     color: "#3f735e"
-    distanceKm: 18.14
-    elevationM: 1113
-    durationHours: 6.79
-    highestPointM: 1725
-    date: 2022-04-10
 ---
 
 **Start:** [lokacija](https://maps.app.goo.gl/5jwEgkkAmLVT5Abd7)

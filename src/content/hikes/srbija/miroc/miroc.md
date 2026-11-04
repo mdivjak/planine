@@ -19,19 +19,9 @@ gpxTracks:
   - src: "/gpx/archive/srbija/miroc/miroc-1.gpx"
     label: "Miroč Trek"
     color: "#d56a42"
-    distanceKm: 17.38
-    elevationM: 975
-    durationHours: 6.92
-    highestPointM: 749
-    date: 2021-09-19
   - src: "/gpx/archive/srbija/miroc/miroc-2.gpx"
     label: "Trek Miroč"
     color: "#3f735e"
-    distanceKm: 16.16
-    elevationM: 1167
-    durationHours: 6.66
-    highestPointM: 777
-    date: 2024-03-21
 ---
 
 **Start:** [lokacija](https://maps.app.goo.gl/g3M1FznAeDbVGXDc6)

@@ -19,19 +19,9 @@ gpxTracks:
   - src: "/gpx/archive/srbija/suvobor-rajac/rajac-suvobor.gpx"
     label: "Trek - Rajac Suvobor"
     color: "#d56a42"
-    distanceKm: 18.92
-    elevationM: 1021
-    durationHours: 6.49
-    highestPointM: 867
-    date: 2023-05-07
   - src: "/gpx/archive/srbija/suvobor-rajac/suvobor.gpx"
     label: "Trek Suvobor"
     color: "#3f735e"
-    distanceKm: 13.82
-    elevationM: 1066
-    durationHours: 6.05
-    highestPointM: 894
-    date: 2024-03-03
 ---
 
 **Start duže staze:** [lokacija](https://maps.app.goo.gl/i4nAe62mwHDuEaHWA)

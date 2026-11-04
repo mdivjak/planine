@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2023-06-25
 featured: false
 sourceOrder: 2
-distanceKm: 8.51
-elevationM: 339
-durationHours: 3
-highestPointM: 1500
 tags: ["Crna Gora","Durmitor","Crno jezero","Zminje i Barno jezero"]
 trailhead:
   lat: 43.15411
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/crna-gora/durmitor/zminje-i-barno-jezero.gpx"
     label: "Trek Durmitor: Zminje i Barno jezero"
     color: "#93616b"
-    distanceKm: 8.51
-    elevationM: 339
-    durationHours: 3
-    highestPointM: 1500
-    date: 2023-06-25
 ---
 
 **Start:** [Parking kod Crnog jezera](https://maps.app.goo.gl/GGZpC6wCDgeCVjkf9)

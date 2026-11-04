@@ -36,27 +36,12 @@ gpxTracks:
   - src: "/gpx/archive/srbija/zagajicka-brda/zagajicka-brda-leti.gpx"
     label: "Zagajička brda - leti"
     color: "#d56a42"
-    distanceKm: 15.35
-    elevationM: 332
-    durationHours: 5.01
-    highestPointM: 235
-    date: 2021-04-25
   - src: "/gpx/archive/srbija/zagajicka-brda/zagajicka-brda-zimi.gpx"
     label: "Zagajicka brda - zimi"
     color: "#3f735e"
-    distanceKm: 14.65
-    elevationM: 582
-    durationHours: 4.62
-    highestPointM: 234
-    date: 2023-01-28
   - src: "/gpx/archive/srbija/zagajicka-brda/zagajicka-brda-jesen.gpx"
     label: "Zagajička brda - jesen"
     color: "#416b8b"
-    distanceKm: 18.65
-    elevationM: 320
-    durationHours: 5.58
-    highestPointM: 248
-    date: 2024-10-13
 ---
 
 **Start:** [lokacija](https://maps.app.goo.gl/EAw14xAPwVMoZDCJ7)

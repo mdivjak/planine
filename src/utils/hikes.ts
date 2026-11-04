@@ -1,6 +1,22 @@
-import type { CollectionEntry } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
+import { getTrackMetrics, summarizeTrackMetrics } from './track-metrics';
 
-export type Hike = CollectionEntry<'hikes'>;
+export const getHikes = async () => (await getCollection('hikes')).map((hike) => {
+  const gpxTracks = hike.data.gpxTracks.map((track) => ({
+    ...track,
+    ...getTrackMetrics(track.src),
+  }));
+  return {
+    ...hike,
+    data: {
+      ...hike.data,
+      ...summarizeTrackMetrics(hike.data.trackMode, gpxTracks),
+      gpxTracks,
+    },
+  };
+});
+
+export type Hike = Awaited<ReturnType<typeof getHikes>>[number];
 export type Guide = CollectionEntry<'guides'>;
 export interface HikeRecord {
   hike: Hike;

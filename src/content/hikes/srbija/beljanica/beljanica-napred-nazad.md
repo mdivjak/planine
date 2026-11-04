@@ -19,19 +19,9 @@ gpxTracks:
   - src: "/gpx/archive/srbija/beljanica/beljanica-inout.gpx"
     label: "Beljanica Inout"
     color: "#d56a42"
-    distanceKm: 15.93
-    elevationM: 1038
-    durationHours: 6.66
-    highestPointM: 1329
-    date: 2022-03-20
   - src: "/gpx/archive/srbija/beljanica/beljanica-zimi.gpx"
     label: "Zimi Beljanica Zimski uspon"
     color: "#93616b"
-    distanceKm: 17.09
-    elevationM: 1109
-    durationHours: 7.62
-    highestPointM: 1321
-    date: 2022-02-05
 ---
 
 Najjednostavniji uspon je od restorana i vodopada Veliki buk.

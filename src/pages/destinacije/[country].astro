@@ -3,11 +3,11 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import HikeCard from '../../components/HikeCard.astro';
-import { connectHikes, countrySummaries, type HikeRecord } from '../../utils/hikes';
+import { connectHikes, countrySummaries, getHikes, type HikeRecord } from '../../utils/hikes';
 
 export async function getStaticPaths() {
   const guides = await getCollection('guides');
-  const hikes = await getCollection('hikes');
+  const hikes = await getHikes();
   const records = connectHikes(hikes, guides);
   const countries = [...new Set(guides.map((guide) => guide.data.countrySlug))];
   return countries.map((country) => ({

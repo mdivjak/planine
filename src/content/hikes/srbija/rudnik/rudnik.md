@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2023-04-08
 featured: false
 sourceOrder: 0
-distanceKm: 14.06
-elevationM: 848
-durationHours: 6.23
-highestPointM: 1120
 tags: ["Srbija","Šumadijske planine","Rudnik"]
 trailhead:
   lat: 44.139097
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/srbija/rudnik/rudnik.gpx"
     label: "Trek Rudnik"
     color: "#d56a42"
-    distanceKm: 14.06
-    elevationM: 848
-    durationHours: 6.23
-    highestPointM: 1120
-    date: 2023-04-08
 ---
 
 **Start:** [lokacija](https://maps.app.goo.gl/vLTwppeYKSkAuz5W8)

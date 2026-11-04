@@ -4,7 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import GpxMap from '../../components/GpxMap.astro';
 import GpxDownloads from '../../components/GpxDownloads.astro';
 import PhotoGallery from '../../components/PhotoGallery.astro';
-import { withBase } from '../../utils/hikes';
+import { getHikes, withBase, type Hike } from '../../utils/hikes';
 
 export async function getStaticPaths() {
   const guides = await getCollection('guides');
@@ -19,7 +19,7 @@ interface Props {
 }
 
 const { guide } = Astro.props as Props;
-const hikes = (await getCollection('hikes'))
+const hikes = (await getHikes())
   .filter((hike) => hike.data.guide.id === guide.id)
   .sort((a, b) => a.data.sourceOrder - b.data.sourceOrder);
 const { Content: GuideContent } = await render(guide);
@@ -36,7 +36,7 @@ const mapGroups = Object.values(
       {
         key: string;
         title: string;
-        hikes: CollectionEntry<'hikes'>[];
+        hikes: Hike[];
       }
     >
   >((groups, hike) => {
@@ -116,7 +116,7 @@ const structuredData = {
                           const Content = renderedHikesById.get(hike.id)!;
                           const details = [
                             hike.data.distanceKm && `${hike.data.distanceKm} km`,
-                            hike.data.elevationM && `+${hike.data.elevationM} m`,
+                            hike.data.elevationGainM !== undefined && `+${hike.data.elevationGainM} m`,
                             hike.data.durationHours && `${hike.data.durationHours} h`,
                             hike.data.gpxTracks.length > 1 && `${hike.data.gpxTracks.length} GPX`,
                           ].filter(Boolean);

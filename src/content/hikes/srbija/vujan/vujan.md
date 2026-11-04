@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2021-06-19
 featured: false
 sourceOrder: 0
-distanceKm: 13.17
-elevationM: 1080
-durationHours: 5.12
-highestPointM: 853
 tags: ["Srbija","Šumadijske planine","Vujan"]
 trailhead:
   lat: 43.97161
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/srbija/vujan/vujan.gpx"
     label: "Mali i Veliki Vujan Trek"
     color: "#d56a42"
-    distanceKm: 13.17
-    elevationM: 1080
-    durationHours: 5.12
-    highestPointM: 853
-    date: 2021-06-19
 ---
 
 **Start:** [lokacija](https://maps.app.goo.gl/4SCHrx56uirmGoVP7)

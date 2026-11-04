@@ -39,6 +39,9 @@ jobs:
       - name: Check Astro project
         run: npm run astro -- check
 
+      - name: Check centralized GPX metrics
+        run: npm run test:metrics
+
       - name: Configure GitHub Pages
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: actions/configure-pages@v6

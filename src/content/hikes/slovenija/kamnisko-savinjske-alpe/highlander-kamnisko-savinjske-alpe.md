@@ -10,10 +10,6 @@ trackMode: "segments"
 date: 2024-08-31
 featured: false
 sourceOrder: 1
-distanceKm: 57.33
-elevationM: 3697
-durationHours: 54.85
-highestPointM: 1679
 tags: ["Slovenija","Kamniško-Savinjske Alpe","Kamniško-savinjske Alpe","Luče, Velika planina i Krvavec","Highlander Kamniško-savinjske Alpe","Dan 1","Dan 2","Dan 3"]
 trailhead:
   lat: 46.355944
@@ -23,27 +19,12 @@ gpxTracks:
   - src: "/gpx/archive/slovenija/kamnisko-savinjske-alpe/highlander-dan1.gpx"
     label: "Highlander Kamnik 1/3"
     color: "#3f735e"
-    distanceKm: 17.2
-    elevationM: 1363
-    durationHours: 9.48
-    highestPointM: 1413
-    date: 2024-08-30
   - src: "/gpx/archive/slovenija/kamnisko-savinjske-alpe/highlander-dan2.gpx"
     label: "Highlander Kamnik 2/3"
     color: "#416b8b"
-    distanceKm: 20.59
-    elevationM: 752
-    durationHours: 25.14
-    highestPointM: 1613
-    date: 2024-08-30
   - src: "/gpx/archive/slovenija/kamnisko-savinjske-alpe/highlander-dan3.gpx"
     label: "Highlander Kamnik 3/3"
     color: "#93616b"
-    distanceKm: 19.54
-    elevationM: 1582
-    durationHours: 20.23
-    highestPointM: 1679
-    date: 2024-08-31
 ---
 
 ### Dan 1

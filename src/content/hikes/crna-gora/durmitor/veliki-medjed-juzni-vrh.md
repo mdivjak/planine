@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2023-06-23
 featured: true
 sourceOrder: 0
-distanceKm: 15.21
-elevationM: 1552
-durationHours: 10.09
-highestPointM: 2242
 tags: ["Crna Gora","Durmitor","Crno jezero i Lokvice","Veliki Međed (južni vrh)"]
 trailhead:
   lat: 43.148517
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/crna-gora/durmitor/durmitor-veliki-medjed.gpx"
     label: "Trek Durmitor: Veliki Međed južni vrh"
     color: "#d56a42"
-    distanceKm: 15.21
-    elevationM: 1552
-    durationHours: 10.09
-    highestPointM: 2242
-    date: 2023-06-23
 ---
 
 **Start:** [Parking kod Crnog jezera](https://maps.app.goo.gl/GGZpC6wCDgeCVjkf9)

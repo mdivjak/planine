@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2023-05-01
 featured: false
 sourceOrder: 0
-distanceKm: 9.5
-elevationM: 368
-durationHours: 3.68
-highestPointM: 1101
 tags: ["Srbija","Zapadna Srbija","Tara","Banjska stena"]
 trailhead:
   lat: 43.919979
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/srbija/tara/tara-banjska-stena.gpx"
     label: "Trek - Tara Banjska stena"
     color: "#d56a42"
-    distanceKm: 9.5
-    elevationM: 368
-    durationHours: 3.68
-    highestPointM: 1101
-    date: 2023-05-01
 ---
 
 **Start:** [lokacija](https://maps.app.goo.gl/8juYCJFW74xAkUrJ9)

@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2025-02-23
 featured: false
 sourceOrder: 2
-distanceKm: 13.91
-elevationM: 1257
-durationHours: 5.74
-highestPointM: 483
 tags: ["Srbija","Vojvodina","Fruška gora","Vrdnik i Brankovac","Vrdnik"]
 trailhead:
   lat: 45.144626
@@ -33,11 +29,6 @@ gpxTracks:
   - src: "/gpx/archive/srbija/fruska-gora/fruska-gora-3.gpx"
     label: "Fruska Gora 3"
     color: "#416b8b"
-    distanceKm: 13.91
-    elevationM: 1257
-    durationHours: 5.74
-    highestPointM: 483
-    date: 2025-02-23
 ---
 
 **Start:** [Parking kod potoka Babin guz](https://maps.app.goo.gl/9bwN8BPaZaUmdCou8)

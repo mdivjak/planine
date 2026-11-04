@@ -1,6 +1,7 @@
 import { readFile, readdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { parse } from 'yaml';
+import { getTrackMetrics, summarizeTrackMetrics, trackMetrics } from '../src/utils/track-metrics.ts';
 
 const root = new URL('../', import.meta.url);
 const hikesRoot = new URL('src/content/hikes/', root);
@@ -41,27 +42,37 @@ for (const file of hikeFiles) {
     throw new Error(`Invalid hike metadata: ${file.pathname}`);
   }
   const markdownPath = path.relative(root.pathname, file.pathname);
-  const row = (type, track, notes = '') => [
-    type, markdownPath, hike.title, hike.trackMode, track.src ?? '', track.label ?? '',
-    track.distanceKm ?? '', track.elevationM ?? '', '', '', 'pending', '', notes,
-  ];
-  rows.push(row('hike', hike,
+  const resolvedTracks = hike.gpxTracks.map((track) => ({
+    ...track, ...getTrackMetrics(track.src),
+  }));
+  const summary = summarizeTrackMetrics(hike.trackMode, resolvedTracks);
+  rows.push([
+    'hike', markdownPath, hike.title, hike.trackMode, '', '',
+    summary.distanceKm ?? '', summary.elevationGainM ?? '', '', '', 'derived', '',
     hike.trackMode === 'variants' ? 'Alternative tracks must not be summed.' :
-      hike.trackMode === 'segments' ? 'Summary of consecutive segments; review against segment totals.' :
-        'Review summary together with its single track.'));
+      'Derived summary; edit the individual track entries in src/data/track-metrics.json.',
+  ]);
   for (const track of hike.gpxTracks) {
     if (!gpxPaths.has(track.src)) throw new Error(`Missing GPX: ${track.src} (${markdownPath})`);
     if (assigned.has(track.src)) throw new Error(`GPX assigned more than once: ${track.src}`);
     assigned.add(track.src);
-    rows.push(row('track', track));
+    const metrics = trackMetrics[track.src];
+    rows.push([
+      'track', markdownPath, hike.title, hike.trackMode, track.src, track.label,
+      metrics.distanceKm ?? '', metrics.elevationGainM ?? '', '', '',
+      metrics.reviewStatus, metrics.source, metrics.notes,
+    ]);
   }
 }
 
 for (const gpxPath of gpxPaths) {
   if (!assigned.has(gpxPath)) {
+    getTrackMetrics(gpxPath);
+    const metrics = trackMetrics[gpxPath];
     rows.push([
-      'unassigned_track', '', '', '', gpxPath, '', '', '', '', '', 'pending', '',
-      'No hike references this GPX. No published metrics to correct; review before assigning or removing.',
+      'unassigned_track', '', '', '', gpxPath, '',
+      metrics.distanceKm ?? '', metrics.elevationGainM ?? '', '', '',
+      metrics.reviewStatus, metrics.source, metrics.notes,
     ]);
   }
 }

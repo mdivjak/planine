@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2023-10-29
 featured: false
 sourceOrder: 3
-distanceKm: 14.22
-elevationM: 903
-durationHours: 7.66
-highestPointM: 2327
 tags: ["Crna Gora","Durmitor","Bosača","Planinica"]
 trailhead:
   lat: 43.157964
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/crna-gora/durmitor/durmitor-planinica.gpx"
     label: "Trek Durmitor: Planinica"
     color: "#7965a5"
-    distanceKm: 14.22
-    elevationM: 903
-    durationHours: 7.66
-    highestPointM: 2327
-    date: 2023-10-29
 ---
 
 **Start:** [lokacija](https://maps.app.goo.gl/S9CpVvLp8Srpf4Ji7)

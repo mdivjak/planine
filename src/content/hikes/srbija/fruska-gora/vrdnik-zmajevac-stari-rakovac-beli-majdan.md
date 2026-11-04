@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2022-02-19
 featured: true
 sourceOrder: 0
-distanceKm: 19.41
-elevationM: 791
-durationHours: 6.69
-highestPointM: 485
 tags: ["Srbija","Vojvodina","Fruška gora","Vrdnik i Zmajevac","Vrdnik - Zmajevac - Stari Rakovac - Beli Majdan"]
 trailhead:
   lat: 45.135623
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/srbija/fruska-gora/fruska-gora-1.gpx"
     label: "Trek Fruska Gora"
     color: "#d56a42"
-    distanceKm: 19.41
-    elevationM: 791
-    durationHours: 6.69
-    highestPointM: 485
-    date: 2022-02-19
 ---
 
 **Start:** [Lokacija](https://maps.app.goo.gl/pVUZHtGtk7XV6SCB9)

@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2024-08-18
 featured: false
 sourceOrder: 0
-distanceKm: 17.08
-elevationM: 2253
-durationHours: 7.98
-highestPointM: 921
 tags: ["Srbija","Zapadna Srbija","Kanjon Crne reke"]
 trailhead:
   lat: 44.1264
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/srbija/kanjon-crne-reke/kanjon-crne-reke.gpx"
     label: "Kanjon Crne reke"
     color: "#d56a42"
-    distanceKm: 17.08
-    elevationM: 2253
-    durationHours: 7.98
-    highestPointM: 921
-    date: 2024-08-18
 ---
 
 **Start:** [Domaćinstvo Obradović](https://maps.app.goo.gl/KqXsF3T5qHfDWYEr7)

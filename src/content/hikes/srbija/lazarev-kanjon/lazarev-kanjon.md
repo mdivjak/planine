@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2024-10-20
 featured: false
 sourceOrder: 0
-distanceKm: 17.73
-elevationM: 1939
-durationHours: 7.33
-highestPointM: 814
 tags: ["Srbija","Istočna Srbija","Lazarev kanjon"]
 trailhead:
   lat: 44.029298
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/srbija/lazarev-kanjon/lazarev-kanjon.gpx"
     label: "Lazarev kanjon"
     color: "#d56a42"
-    distanceKm: 17.73
-    elevationM: 1939
-    durationHours: 7.33
-    highestPointM: 814
-    date: 2024-10-20
 ---
 
 **Start:** [Kod Lazareve pećine](https://maps.app.goo.gl/EbJsm6Kse9oszYtj6)

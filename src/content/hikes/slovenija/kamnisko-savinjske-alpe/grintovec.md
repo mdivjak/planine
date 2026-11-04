@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2023-01-14
 featured: false
 sourceOrder: 0
-distanceKm: 12.6
-elevationM: 1532
-durationHours: 12.71
-highestPointM: 2085
 tags: ["Slovenija","Kamniško-Savinjske Alpe","Kamniško-savinjske Alpe","Suhadolnik i Čojzova koča","Grintovec"]
 trailhead:
   lat: 46.335155
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/slovenija/kamnisko-savinjske-alpe/grintovec.gpx"
     label: "Trek Grintovec - skoro do vrha"
     color: "#d56a42"
-    distanceKm: 12.6
-    elevationM: 1532
-    durationHours: 12.71
-    highestPointM: 2085
-    date: 2023-01-14
 ---
 
 Ovo je najteža staza na kojoj sam bio.

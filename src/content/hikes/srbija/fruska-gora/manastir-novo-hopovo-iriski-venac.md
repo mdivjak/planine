@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2023-04-16
 featured: false
 sourceOrder: 1
-distanceKm: 10.12
-elevationM: 511
-durationHours: 3.71
-highestPointM: 495
 tags: ["Srbija","Vojvodina","Fruška gora","Novo Hopovo i Iriški venac","Manastir Novo Hopovo - Iriški venac"]
 trailhead:
   lat: 45.129183
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/srbija/fruska-gora/fruska-gora-2.gpx"
     label: "Trek Fruška gora"
     color: "#3f735e"
-    distanceKm: 10.12
-    elevationM: 511
-    durationHours: 3.71
-    highestPointM: 495
-    date: 2023-04-16
 ---
 
 **Start:** [Kod manastira Novo Hopovo](https://maps.app.goo.gl/tFryVfz5JJi44xT97)

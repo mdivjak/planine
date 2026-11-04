@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2024-08-24
 featured: false
 sourceOrder: 5
-distanceKm: 17.32
-elevationM: 852
-durationHours: 7.59
-highestPointM: 1703
 tags: ["Crna Gora","Durmitor","Sušičko jezero","Škrčka jezera od Sušičkog jezera"]
 trailhead:
   lat: 43.184019
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/crna-gora/durmitor/durmitor-susicko-skrcko-jezero.gpx"
     label: "Sušičko jezero - Škrčka jezera (Durmitor)"
     color: "#2d7777"
-    distanceKm: 17.32
-    elevationM: 852
-    durationHours: 7.59
-    highestPointM: 1703
-    date: 2024-08-24
 ---
 
 **Start:** [lokacija](https://maps.app.goo.gl/zmzoYjnZQ3SjxuFPA)

@@ -19,19 +19,9 @@ gpxTracks:
   - src: "/gpx/archive/srbija/homoljske-planine/vukan-grebenom.gpx"
     label: "Vukan grebenom"
     color: "#d56a42"
-    distanceKm: 10.79
-    elevationM: 1453
-    durationHours: 6.42
-    highestPointM: 810
-    date: 2022-09-04
   - src: "/gpx/archive/srbija/homoljske-planine/zdrelo-vukan.gpx"
     label: "Trek Veliki Vukan"
     color: "#3f735e"
-    distanceKm: 11.7
-    elevationM: 690
-    durationHours: 5.02
-    highestPointM: 804
-    date: 2024-03-16
 ---
 
 Postoji nekoliko staza koje vode do vrha Vukana.

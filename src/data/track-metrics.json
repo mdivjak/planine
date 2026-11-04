@@ -1,0 +1,767 @@
+{
+  "/gpx/annapurna-lower.gpx": {
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": "Unassigned GPX; no published metrics were available during migration."
+  },
+  "/gpx/annapurna-upper.gpx": {
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": "Unassigned GPX; no published metrics were available during migration."
+  },
+  "/gpx/archive/crna-gora/boka-kotorska/sanik-tvrdjava.gpx": {
+    "distanceKm": 9.64,
+    "elevationGainM": 749,
+    "durationHours": 2.65,
+    "highestPointM": 894,
+    "date": "2024-02-17",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/crna-gora/durmitor/durmitor-bandijerna.gpx": {
+    "distanceKm": 6.78,
+    "elevationGainM": 504,
+    "durationHours": 5.31,
+    "highestPointM": 2320,
+    "date": "2024-08-25",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/crna-gora/durmitor/durmitor-crvena-greda.gpx": {
+    "distanceKm": 10.55,
+    "elevationGainM": 930,
+    "durationHours": 6.66,
+    "highestPointM": 2120,
+    "date": "2023-06-24",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/crna-gora/durmitor/durmitor-jablan-jezero.gpx": {
+    "distanceKm": 5.34,
+    "elevationGainM": 241,
+    "durationHours": 1.49,
+    "highestPointM": 1837,
+    "date": "2023-10-29",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/crna-gora/durmitor/durmitor-planinica.gpx": {
+    "distanceKm": 14.22,
+    "elevationGainM": 903,
+    "durationHours": 7.66,
+    "highestPointM": 2327,
+    "date": "2023-10-29",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/crna-gora/durmitor/durmitor-prutas.gpx": {
+    "distanceKm": 9.65,
+    "elevationGainM": 1166,
+    "durationHours": 6.06,
+    "highestPointM": 2414,
+    "date": "2023-10-30",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/crna-gora/durmitor/durmitor-susicko-skrcko-jezero.gpx": {
+    "distanceKm": 17.32,
+    "elevationGainM": 852,
+    "durationHours": 7.59,
+    "highestPointM": 1703,
+    "date": "2024-08-24",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/crna-gora/durmitor/durmitor-veliki-medjed.gpx": {
+    "distanceKm": 15.21,
+    "elevationGainM": 1552,
+    "durationHours": 10.09,
+    "highestPointM": 2242,
+    "date": "2023-06-23",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/crna-gora/durmitor/zminje-i-barno-jezero.gpx": {
+    "distanceKm": 8.51,
+    "elevationGainM": 339,
+    "durationHours": 3,
+    "highestPointM": 1500,
+    "date": "2023-06-25",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/crna-gora/orjen/orjen-subra.gpx": {
+    "distanceKm": 14.77,
+    "elevationGainM": 1842,
+    "durationHours": 8.88,
+    "highestPointM": 1692,
+    "date": "2024-02-16",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/crna-gora/prokletije/cakor-veliki-starac.gpx": {
+    "distanceKm": 13.69,
+    "elevationGainM": 1088,
+    "durationHours": 6.06,
+    "highestPointM": 2316,
+    "date": "2026-09-28",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/crna-gora/prokletije/hridsko-jezero.gpx": {
+    "distanceKm": 6.67,
+    "elevationGainM": 773,
+    "durationHours": 3.46,
+    "highestPointM": 1985,
+    "date": "2026-09-29",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/crna-gora/prokletije/popadija-talijanka-volusnica.gpx": {
+    "distanceKm": 11.02,
+    "elevationGainM": 1673,
+    "durationHours": 7.45,
+    "highestPointM": 2059,
+    "date": "2025-06-21",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/nepal/annapurna-base-camp/dan1-siwai-jhinu-danda.gpx": {
+    "distanceKm": 8.75,
+    "elevationGainM": 761,
+    "durationHours": 3.86,
+    "highestPointM": 1907,
+    "date": "2022-04-25",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/nepal/annapurna-base-camp/dan2-jhinu-danda-chhomrong.gpx": {
+    "distanceKm": 2,
+    "elevationGainM": 471,
+    "durationHours": 1.51,
+    "highestPointM": 2179,
+    "date": "2022-04-26",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/nepal/annapurna-base-camp/dan3-chhomrong-dovan.gpx": {
+    "distanceKm": 11.04,
+    "elevationGainM": 1083,
+    "durationHours": 5.9,
+    "highestPointM": 2422,
+    "date": "2022-04-27",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/nepal/annapurna-base-camp/dan4-dovan-deurali.gpx": {
+    "distanceKm": 7.43,
+    "elevationGainM": 902,
+    "durationHours": 3.76,
+    "highestPointM": 3177,
+    "date": "2022-04-28",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/nepal/annapurna-base-camp/dan5-deurali-abc.gpx": {
+    "distanceKm": 7.63,
+    "elevationGainM": 1086,
+    "durationHours": 4.99,
+    "highestPointM": 4008,
+    "date": "2022-04-29",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/nepal/annapurna-base-camp/dan6-abc-dovan.gpx": {
+    "distanceKm": 12.79,
+    "elevationGainM": 267,
+    "durationHours": 4.9,
+    "highestPointM": 4143,
+    "date": "2022-04-30",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/nepal/annapurna-base-camp/dan7-dovan-chhomrong.gpx": {
+    "distanceKm": 10.35,
+    "elevationGainM": 744,
+    "durationHours": 4.36,
+    "highestPointM": 2521,
+    "date": "2022-05-01",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/nepal/annapurna-base-camp/dan8-chhomrong-siwai.gpx": {
+    "distanceKm": 10.69,
+    "elevationGainM": 412,
+    "durationHours": 4.57,
+    "highestPointM": 2210,
+    "date": "2022-05-02",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/slovenija/kamnisko-savinjske-alpe/grintovec.gpx": {
+    "distanceKm": 12.6,
+    "elevationGainM": 1532,
+    "durationHours": 12.71,
+    "highestPointM": 2085,
+    "date": "2023-01-14",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/slovenija/kamnisko-savinjske-alpe/highlander-dan1.gpx": {
+    "distanceKm": 17.2,
+    "elevationGainM": 1363,
+    "durationHours": 9.48,
+    "highestPointM": 1413,
+    "date": "2024-08-30",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/slovenija/kamnisko-savinjske-alpe/highlander-dan2.gpx": {
+    "distanceKm": 20.59,
+    "elevationGainM": 752,
+    "durationHours": 25.14,
+    "highestPointM": 1613,
+    "date": "2024-08-30",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/slovenija/kamnisko-savinjske-alpe/highlander-dan3.gpx": {
+    "distanceKm": 19.54,
+    "elevationGainM": 1582,
+    "durationHours": 20.23,
+    "highestPointM": 1679,
+    "date": "2024-08-31",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/beljanica/beljanica-inout.gpx": {
+    "distanceKm": 15.93,
+    "elevationGainM": 1038,
+    "durationHours": 6.66,
+    "highestPointM": 1329,
+    "date": "2022-03-20",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/beljanica/beljanica-kroz-potok.gpx": {
+    "distanceKm": 18.3,
+    "elevationGainM": 1419,
+    "durationHours": 8.35,
+    "highestPointM": 1326,
+    "date": "2021-09-05",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/beljanica/beljanica-kruzna-duza.gpx": {
+    "distanceKm": 18.51,
+    "elevationGainM": 1432,
+    "durationHours": 7.59,
+    "highestPointM": 1345,
+    "date": "2023-09-23",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/beljanica/beljanica-zimi.gpx": {
+    "distanceKm": 17.09,
+    "elevationGainM": 1109,
+    "durationHours": 7.62,
+    "highestPointM": 1321,
+    "date": "2022-02-05",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/fruska-gora/fruska-gora-1.gpx": {
+    "distanceKm": 19.41,
+    "elevationGainM": 791,
+    "durationHours": 6.69,
+    "highestPointM": 485,
+    "date": "2022-02-19",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/fruska-gora/fruska-gora-2.gpx": {
+    "distanceKm": 10.12,
+    "elevationGainM": 511,
+    "durationHours": 3.71,
+    "highestPointM": 495,
+    "date": "2023-04-16",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/fruska-gora/fruska-gora-3.gpx": {
+    "distanceKm": 13.91,
+    "elevationGainM": 1257,
+    "durationHours": 5.74,
+    "highestPointM": 483,
+    "date": "2025-02-23",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/fruska-gora/fruska-gora-4.gpx": {
+    "distanceKm": 13.93,
+    "elevationGainM": 687,
+    "durationHours": 5.62,
+    "highestPointM": 504,
+    "date": "2025-11-09",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/gradac/gradac.gpx": {
+    "distanceKm": 14.19,
+    "elevationGainM": 433,
+    "durationHours": 5.63,
+    "highestPointM": 396,
+    "date": "2024-11-17",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/homoljske-planine/jezevac.gpx": {
+    "distanceKm": 9.8,
+    "elevationGainM": 958,
+    "durationHours": 4.79,
+    "highestPointM": 694,
+    "date": "2023-03-26",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/homoljske-planine/sumorovac-1.gpx": {
+    "distanceKm": 13.96,
+    "elevationGainM": 822,
+    "durationHours": 6.28,
+    "highestPointM": 925,
+    "date": "2021-11-21",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/homoljske-planine/sumorovac-2.gpx": {
+    "distanceKm": 15.33,
+    "elevationGainM": 743,
+    "durationHours": 6.42,
+    "highestPointM": 906,
+    "date": "2022-03-13",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/homoljske-planine/vukan-grebenom.gpx": {
+    "distanceKm": 10.79,
+    "elevationGainM": 1453,
+    "durationHours": 6.42,
+    "highestPointM": 810,
+    "date": "2022-09-04",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/homoljske-planine/zdrelo-vukan.gpx": {
+    "distanceKm": 11.7,
+    "elevationGainM": 690,
+    "durationHours": 5.02,
+    "highestPointM": 804,
+    "date": "2024-03-16",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/kablar/kablar.gpx": {
+    "distanceKm": 10.29,
+    "elevationGainM": 572,
+    "durationHours": 5.28,
+    "highestPointM": 856,
+    "date": "2021-11-11",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/kanjon-crne-reke/kanjon-crne-reke.gpx": {
+    "distanceKm": 17.08,
+    "elevationGainM": 2253,
+    "durationHours": 7.98,
+    "highestPointM": 921,
+    "date": "2024-08-18",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/kosmaj/kosmaj.gpx": {
+    "distanceKm": 14.19,
+    "elevationGainM": 850,
+    "durationHours": 5.18,
+    "highestPointM": 575,
+    "date": "2024-02-04",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/lazarev-kanjon/lazarev-kanjon.gpx": {
+    "distanceKm": 17.73,
+    "elevationGainM": 1939,
+    "durationHours": 7.33,
+    "highestPointM": 814,
+    "date": "2024-10-20",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/magles/magles.gpx": {
+    "distanceKm": 14.85,
+    "elevationGainM": 864,
+    "durationHours": 7.15,
+    "highestPointM": 1021,
+    "date": "2022-03-06",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/medvednik/medvednik.gpx": {
+    "distanceKm": 13.47,
+    "elevationGainM": 781,
+    "durationHours": 5.23,
+    "highestPointM": 1227,
+    "date": "2023-09-02",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/miroc/miroc-1.gpx": {
+    "distanceKm": 17.38,
+    "elevationGainM": 975,
+    "durationHours": 6.92,
+    "highestPointM": 749,
+    "date": "2021-09-19",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/miroc/miroc-2.gpx": {
+    "distanceKm": 16.16,
+    "elevationGainM": 1167,
+    "durationHours": 6.66,
+    "highestPointM": 777,
+    "date": "2024-03-21",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/ovcar/ovcar.gpx": {
+    "distanceKm": 9.9,
+    "elevationGainM": 753,
+    "durationHours": 5.46,
+    "highestPointM": 961,
+    "date": "2022-02-13",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/povlen/povlen-jesen.gpx": {
+    "distanceKm": 11.23,
+    "elevationGainM": 500,
+    "durationHours": 5.13,
+    "highestPointM": 1335,
+    "date": "2022-11-20",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/povlen/povlen-zimi.gpx": {
+    "distanceKm": 15.24,
+    "elevationGainM": 938,
+    "durationHours": 6.28,
+    "highestPointM": 1366,
+    "date": "2023-03-04",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/rtanj/rtanj-jug.gpx": {
+    "distanceKm": 15.1,
+    "elevationGainM": 960,
+    "durationHours": 7.15,
+    "highestPointM": 1536,
+    "date": "2021-07-31",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/rtanj/rtanj-sever-jug.gpx": {
+    "distanceKm": 15.01,
+    "elevationGainM": 1183,
+    "durationHours": 7.34,
+    "highestPointM": 1536,
+    "date": "2021-05-23",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/rudnik/rudnik.gpx": {
+    "distanceKm": 14.06,
+    "elevationGainM": 848,
+    "durationHours": 6.23,
+    "highestPointM": 1120,
+    "date": "2023-04-08",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/stara-planina/babin-zub-midzor-topli-do.gpx": {
+    "distanceKm": 16.85,
+    "elevationGainM": 698,
+    "durationHours": 6.11,
+    "highestPointM": 2143,
+    "date": "2022-11-12",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/stara-planina/dojkinci-ponor.gpx": {
+    "distanceKm": 8.16,
+    "elevationGainM": 683,
+    "durationHours": 3.13,
+    "highestPointM": 1459,
+    "date": "2025-11-30",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/stara-planina/dojkinci-tri-cuke.gpx": {
+    "distanceKm": 14.42,
+    "elevationGainM": 863,
+    "durationHours": 5.99,
+    "highestPointM": 1993,
+    "date": "2025-11-29",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/stara-planina/topli-do-babin-zub.gpx": {
+    "distanceKm": 11.97,
+    "elevationGainM": 952,
+    "durationHours": 4.47,
+    "highestPointM": 1615,
+    "date": "2022-11-13",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/stolovi/stolovi.gpx": {
+    "distanceKm": 16.9,
+    "elevationGainM": 1774,
+    "durationHours": 8.68,
+    "highestPointM": 1375,
+    "date": "2023-05-20",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/studena-planina/studena-planina.gpx": {
+    "distanceKm": 18.19,
+    "elevationGainM": 794,
+    "durationHours": 7.36,
+    "highestPointM": 1345,
+    "date": "2022-10-15",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/suva-planina/dan1-bezanje.gpx": {
+    "distanceKm": 1.6,
+    "elevationGainM": 54,
+    "durationHours": 5.01,
+    "highestPointM": 1506,
+    "date": "2024-04-06",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/suva-planina/dan1-pasarelo.gpx": {
+    "distanceKm": 13.29,
+    "elevationGainM": 1207,
+    "durationHours": 8.68,
+    "highestPointM": 1569,
+    "date": "2024-04-06",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/suva-planina/dan2-pasarelo-spustanje.gpx": {
+    "distanceKm": 8.68,
+    "elevationGainM": 8,
+    "durationHours": 12.95,
+    "highestPointM": 1444,
+    "date": "2024-04-06",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/suva-planina/trem-bojanine-vode.gpx": {
+    "distanceKm": 15.1,
+    "elevationGainM": 1332,
+    "durationHours": 5.7,
+    "highestPointM": 1848,
+    "date": "2022-12-04",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/suvobor-rajac/rajac-suvobor.gpx": {
+    "distanceKm": 18.92,
+    "elevationGainM": 1021,
+    "durationHours": 6.49,
+    "highestPointM": 867,
+    "date": "2023-05-07",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/suvobor-rajac/suvobor.gpx": {
+    "distanceKm": 13.82,
+    "elevationGainM": 1066,
+    "durationHours": 6.05,
+    "highestPointM": 894,
+    "date": "2024-03-03",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/tara/tara-banjska-stena.gpx": {
+    "distanceKm": 9.5,
+    "elevationGainM": 368,
+    "durationHours": 3.68,
+    "highestPointM": 1101,
+    "date": "2023-05-01",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/tupiznica/tupiznica.gpx": {
+    "distanceKm": 12.93,
+    "elevationGainM": 1198,
+    "durationHours": 6.1,
+    "highestPointM": 1164,
+    "date": "2024-10-19",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/vrsacke-planine/vrsacke-planine.gpx": {
+    "distanceKm": 19.22,
+    "elevationGainM": 977,
+    "durationHours": 6.47,
+    "highestPointM": 622,
+    "date": "2022-04-17",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/vujan/vujan.gpx": {
+    "distanceKm": 13.17,
+    "elevationGainM": 1080,
+    "durationHours": 5.12,
+    "highestPointM": 853,
+    "date": "2021-06-19",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/zagajicka-brda/zagajicka-brda-jesen.gpx": {
+    "distanceKm": 18.65,
+    "elevationGainM": 320,
+    "durationHours": 5.58,
+    "highestPointM": 248,
+    "date": "2024-10-13",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/zagajicka-brda/zagajicka-brda-leti.gpx": {
+    "distanceKm": 15.35,
+    "elevationGainM": 332,
+    "durationHours": 5.01,
+    "highestPointM": 235,
+    "date": "2021-04-25",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/zagajicka-brda/zagajicka-brda-zimi.gpx": {
+    "distanceKm": 14.65,
+    "elevationGainM": 582,
+    "durationHours": 4.62,
+    "highestPointM": 234,
+    "date": "2023-01-28",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/zeljin/zeljin-jesen.gpx": {
+    "distanceKm": 17.97,
+    "elevationGainM": 1204,
+    "durationHours": 6.55,
+    "highestPointM": 1760,
+    "date": "2021-11-28",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/archive/srbija/zeljin/zeljin-zima.gpx": {
+    "distanceKm": 18.14,
+    "elevationGainM": 1113,
+    "durationHours": 6.79,
+    "highestPointM": 1725,
+    "date": "2022-04-10",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  },
+  "/gpx/durmitor-medjed.gpx": {
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": "Unassigned GPX; no published metrics were available during migration."
+  },
+  "/gpx/fruska-hopovo.gpx": {
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": "Unassigned GPX; no published metrics were available during migration."
+  },
+  "/gpx/fruska-vrdnik.gpx": {
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": "Unassigned GPX; no published metrics were available during migration."
+  }
+}

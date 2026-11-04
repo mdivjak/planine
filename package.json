@@ -11,7 +11,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "validate:content": "node scripts/validate-content.mjs",
-    "export:metrics": "node scripts/export-metrics.mjs"
+    "export:metrics": "node scripts/export-metrics.mjs",
+    "test:metrics": "node --test scripts/track-metrics.test.mjs"
   },
   "dependencies": {
     "astro": "5.16.5",

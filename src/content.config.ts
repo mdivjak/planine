@@ -5,12 +5,7 @@ const gpxTrack = z.object({
   src: z.string(),
   label: z.string(),
   color: z.string().regex(/^#[0-9a-fA-F]{6}$/),
-  distanceKm: z.number().positive().optional(),
-  elevationM: z.number().int().nonnegative().optional(),
-  durationHours: z.number().positive().optional(),
-  highestPointM: z.number().int().optional(),
-  date: z.coerce.date().optional(),
-});
+}).strict();
 
 const guides = defineCollection({
   loader: glob({ base: './src/content/guides', pattern: '**/*.{md,mdx}' }),
@@ -42,10 +37,6 @@ const hikes = defineCollection({
     mapGroupTitle: z.string(),
     trackMode: z.enum(['single', 'variants', 'segments']),
     date: z.coerce.date(),
-    distanceKm: z.number().positive().optional(),
-    elevationM: z.number().int().positive().optional(),
-    durationHours: z.number().positive().optional(),
-    highestPointM: z.number().int().positive().optional(),
     featured: z.boolean().default(false),
     sourceOrder: z.number().int().nonnegative(),
     tags: z.array(z.string()).default([]),
@@ -63,7 +54,7 @@ const hikes = defineCollection({
       }),
     ).default([]),
     gpxTracks: z.array(gpxTrack).min(1),
-  }),
+  }).strict(),
 });
 
 const pages = defineCollection({

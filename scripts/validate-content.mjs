@@ -1,6 +1,8 @@
 import { access, readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
+import { parse } from 'yaml';
+import { getTrackMetrics, summarizeTrackMetrics, trackMetrics } from '../src/utils/track-metrics.ts';
 
 const root = process.cwd();
 const guidesRoot = path.join(root, 'src', 'content', 'guides');
@@ -50,6 +52,9 @@ for (const filePath of [...guideFiles, ...hikeFiles]) {
 
 for (const filePath of hikeFiles) {
   const content = await readFile(filePath, 'utf8');
+  const frontmatter = content.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/)?.[1];
+  if (!frontmatter) throw new Error(`Missing frontmatter: ${filePath}`);
+  const hike = parse(frontmatter);
   const hikeId = contentId(hikesRoot, filePath);
   const guide = field(content, 'guide');
   const anchor = field(content, 'anchor');
@@ -66,10 +71,17 @@ for (const filePath of hikeFiles) {
     anchorsByGuide.set(guide, anchors);
   }
 
-  for (const match of content.matchAll(/^\s+-\s+src:\s+"(\/gpx\/[^"]+)"/gm)) {
-    referencedGpx.set(match[1], (referencedGpx.get(match[1]) ?? 0) + 1);
-    const assetPath = path.join(publicRoot, ...match[1].replace(/^\//, '').split('/'));
-    if (!(await exists(assetPath))) errors.push(`Nedostaje GPX za ${hikeId}: ${match[1]}`);
+  const metricFields = ['distanceKm', 'elevationM', 'elevationGainM', 'durationHours', 'highestPointM'];
+  for (const entry of [hike, ...hike.gpxTracks]) {
+    for (const key of [...metricFields, ...(entry === hike ? [] : ['date'])]) {
+      if (key in entry) errors.push(`Metrike pripadaju src/data/track-metrics.json: ${hikeId} (${key}).`);
+    }
+  }
+  summarizeTrackMetrics(hike.trackMode, hike.gpxTracks.map((track) => getTrackMetrics(track.src)));
+  for (const track of hike.gpxTracks) {
+    referencedGpx.set(track.src, (referencedGpx.get(track.src) ?? 0) + 1);
+    const assetPath = path.join(publicRoot, ...track.src.replace(/^\//, '').split('/'));
+    if (!(await exists(assetPath))) errors.push(`Nedostaje GPX za ${hikeId}: ${track.src}`);
   }
 }
 
@@ -77,9 +89,17 @@ for (const [gpxPath, usageCount] of referencedGpx) {
   if (usageCount > 1) errors.push(`GPX je dodeljen više puta (${usageCount}): ${gpxPath}`);
 }
 
-const archiveGpx = (await walk(path.join(publicRoot, 'gpx', 'archive')))
+const allGpx = (await walk(path.join(publicRoot, 'gpx')))
   .filter((filePath) => filePath.toLowerCase().endsWith('.gpx'))
   .map((filePath) => `/${path.relative(publicRoot, filePath).replaceAll(path.sep, '/')}`);
+const archiveGpx = allGpx.filter((gpxPath) => gpxPath.startsWith('/gpx/archive/'));
+const allGpxPaths = new Set(allGpx);
+for (const gpxPath of allGpxPaths) {
+  if (!Object.hasOwn(trackMetrics, gpxPath)) errors.push(`Nedostaju centralne GPX metrike: ${gpxPath}`);
+}
+for (const gpxPath of Object.keys(trackMetrics)) {
+  if (!allGpxPaths.has(gpxPath)) errors.push(`Centralne metrike referenciraju nepostojeći GPX: ${gpxPath}`);
+}
 for (const gpxPath of archiveGpx) {
   if (!referencedGpx.has(gpxPath)) errors.push(`Arhivski GPX nije dodeljen turi: ${gpxPath}`);
 }
@@ -144,6 +164,7 @@ if (errors.length) {
         hikes: hikeFiles.length,
         referencedGpx: referencedGpx.size,
         archiveGpx: archiveGpx.length,
+        centralizedGpx: Object.keys(trackMetrics).length,
         internalLinks: (await exists(distRoot)) ? 'checked' : 'build dist/ to check',
       },
       null,

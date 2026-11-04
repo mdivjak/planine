@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2025-11-30
 featured: true
 sourceOrder: 2
-distanceKm: 8.16
-elevationM: 683
-durationHours: 3.13
-highestPointM: 1459
 tags: ["Srbija","Istočna Srbija","Stara planina","Dojkinci i Ponor","Ponor"]
 trailhead:
   lat: 43.232845
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/srbija/stara-planina/dojkinci-ponor.gpx"
     label: "Stara planina: Ponor"
     color: "#93616b"
-    distanceKm: 8.16
-    elevationM: 683
-    durationHours: 3.13
-    highestPointM: 1459
-    date: 2025-11-30
 ---
 
 **Start:** [lokacija](https://maps.app.goo.gl/x2dhwDa6KBBoNWj7A)

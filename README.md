@@ -12,12 +12,13 @@ Potreban je Node.js 24 ili noviji.
 npm install
 npm run dev
 npm run astro -- check
+npm run test:metrics
 npm run build
 npm run validate:content
 npm run preview
 ```
 
-`validate:content` proverava reference tura ka vodičima, jedinstvene anchors, dodelu i postojanje svih GPX datoteka, zaostali Liquid i — nakon build-a — interne linkove i njihove anchors.
+`validate:content` proverava reference tura ka vodičima, jedinstvene anchors, dodelu i postojanje svih GPX datoteka, pokrivenost centralnim metapodacima, odsustvo dupliranih metrika u Markdown-u, zaostali Liquid i — nakon build-a — interne linkove i njihove anchors.
 
 Sajt je podešen za GitHub Pages baznu putanju `/planine` u `astro.config.mjs`. Interni linkovi i lokalni resursi prolaze kroz `withBase()`.
 
@@ -34,9 +35,10 @@ npm run dev -- --host localhost
 src/
 ├── content/
 │   ├── guides/            # Editorialne planinske/destinacijske stranice
-│   ├── hikes/             # Pojedinačne ture i njihove GPX datoteke
+│   ├── hikes/             # Pojedinačne ture i reference na GPX datoteke
 │   └── pages/             # O sajtu i resursi
 ├── content.config.ts      # Tipizovane guides/hikes/pages kolekcije
+├── data/track-metrics.json # Jedini izvor GPX metrika i beleške za proveru
 ├── components/
 │   ├── GpxMap.astro       # Mapa jedne lokalne grupe tragova
 │   ├── GpxDownloads.astro # Preuzimanje GPX-a bez JavaScripta
@@ -46,7 +48,9 @@ src/
 │   ├── destinacije/
 │   └── ture/[...slug].astro
 ├── scripts/gpx-map.ts     # Zajednički GPX parser i Leaflet ponašanje
-└── utils/hikes.ts         # Tipizovano povezivanje guides + hikes
+└── utils/
+    ├── hikes.ts          # Tipizovano povezivanje guides + hikes
+    └── track-metrics.ts  # Validacija, javne metrike i izvedeni sažeci
 public/
 ├── gpx/archive/           # 74 javne GPX datoteke
 └── images/archive/
@@ -72,9 +76,9 @@ Tura predstavlja zaseban izlet/rutu unutar vodiča. Polje `guide` je tipizovana 
 - `localArea` za pristupnu zonu ili lokalitet;
 - `mapGroup` i `mapGroupTitle`;
 - `trackMode`: `single`, `variants` ili `segments`;
-- sopstveni opis, metrike, polazište i oznake;
+- sopstveni opis, polazište i oznake, uz metrike izvedene iz GPX metapodataka;
 - opcioni niz `photos` vezan baš za tu turu;
-- jedan ili više `gpxTracks`, sa nazivom, bojom i raspoloživim statistikama.
+- jedan ili više `gpxTracks`, sa putanjom, nazivom i bojom; statistike dolaze iz centralnog JSON-a.
 
 Direktan URL pojedinačne ture vodi na njenu sekciju unutar korisnog zajedničkog vodiča:
 
@@ -154,50 +158,84 @@ photos:
 
 ## Mape i GPX
 
-### Provera dužine i uspona
+### Centralni GPX metapodaci
 
-`data/route-metrics-review.csv` je radni pregled za Excel, LibreOffice ili Google Sheets,
-a ne novi izvor podataka za sajt. CSV koristi UTF-8 sa BOM oznakom, zarez kao separator
-i decimalnu tačku. Ako Excel ne podeli kolone automatski, koristi uvoz iz Text/CSV.
+**`src/data/track-metrics.json` je jedini izvor metrika za sajt.** Ključ je postojeća
+GPX putanja, ista kao `src` u Markdown `gpxTracks` referenci:
 
-Pregled obuhvata sve GPX datoteke iz `public/gpx/`, uključujući one koje nijedna tura
-ne koristi, kao i zaseban `hike` red za svaki sažetak ture. `track` red odgovara jednom
-zapisu u `gpxTracks`; `unassigned_track` nema objavljene metrike ni Markdown referencu.
-Trenutne vrednosti su prepisane iz frontmatter-a, nisu ponovo izračunate niti potvrđene.
-`elevationM` ovde znači kumulativni uspon u metrima, ne najvišu tačku ili neto razliku visine.
+```json
+{
+  "/gpx/archive/srbija/beljanica/beljanica-inout.gpx": {
+    "distanceKm": 15.93,
+    "elevationGainM": 1038,
+    "durationHours": 6.66,
+    "highestPointM": 1329,
+    "date": "2022-03-20",
+    "reviewStatus": "pending",
+    "source": "",
+    "notes": ""
+  }
+}
+```
 
-Za proveru:
+Ovo su prenete, još neproverene vrednosti. Migracija je sačuvala sve postojeće
+statistike i obuhvatila svih 79 GPX datoteka. Pet nepovezanih datoteka van arhive nema
+poznate metrike i ne prikazuje se na sajtu; njihovi zapisi sadrže samo beleške za proveru.
+Metrike nisu ponovo izračunate iz GPX-a niti automatski proglašene tačnim.
 
-1. Sačuvaj identifikatore (`record_type`, `markdown_path`, `gpx_path`) i `current_*` kolone neizmenjene.
-2. Upiši ispravke u `corrected_distance_km` i `corrected_elevation_gain_m`, bez jedinica;
-   prazna ispravka znači „zadrži postojeće“, ne nulu ili brisanje. Dužina je pozitivan
-   broj kilometara, a uspon ceo nenegativan broj metara (trenutna šema sažetka ture zahteva pozitivan uspon).
-3. Postavi `review_status` na `verified` kada je red proveren, čak i bez ispravki.
-   U `source` navedi izvor/metod provere, a u `notes` objašnjenje eventualne razlike.
-4. Vrati uređeni CSV da se ispravke primene na odgovarajući frontmatter. Samo uređivanje
-   CSV-a ne menja sajt niti koordinate u GPX datotekama; uvoz nije automatizovan.
+Za proveru otvori ovaj JSON i izmeni odgovarajući zapis:
 
-Proveri i sažetak i pojedinačne tragove: kod `single` obično treba da se slažu,
-kod `segments` sažetak predstavlja zbir uzastopnih deonica, a `variants` su alternative
-koje se **ne sabiraju**. Prazne trenutne metrike ostaju nepoznate dok se ne potvrde.
-Uspon zavisi od šuma visine i filtriranja, pa sirov zbir svih pozitivnih promena iz GPX-a
-nije nužno pouzdana referenca.
+1. `distanceKm` je pozitivan broj kilometara, a `elevationGainM` ceo nenegativan broj
+   metara kumulativnog uspona, ne neto razlika visine. Koristi decimalnu tačku i ne upisuj jedinice.
+2. `durationHours` je postojeća zabeležena dužina trajanja u satima, ne garantovano vreme
+   hodanja; `highestPointM` je najviša tačka u metrima, a `date` datum snimanja (`YYYY-MM-DD`).
+   Nepoznato opciono polje izostavi; nemoj upisivati `null`, prazan string ili izmišljenu nulu.
+3. `reviewStatus` promeni iz `pending` u `verified` kada proveriš dužinu i uspon.
+   Ako kasnije menjaš trag ili nepotvrđene vrednosti, vrati status na `pending`.
+   U `source` zapiši referencu/metod, a u `notes` napomene, uključujući obim provere drugih polja.
 
-Novi pregled trenutnog frontmatter-a može se izvesti komandom:
+Status ne utiče na prikaz brojeva: i `pending` i `verified` koriste upisane metrike.
+`reviewStatus`, `source` i `notes` služe samo za rad u repozitorijumu. Ne prosleđuju se
+HTML-u ili podacima mape i JSON se ne kopira u `public/`; ipak, u javnom repozitorijumu
+nisu tajni i u njih ne treba unositi osetljive informacije.
+
+Zajednički `getHikes()` iz `src/utils/hikes.ts` validira JSON i spaja javne metrike sa
+Markdown referencama pri renderovanju; stranice treba da koriste njega umesto direktnog
+`getCollection('hikes')`. Markdown čuva opise, fotografije, polazišta, boje i nazive tragova, ali
+ne sme sadržati duplirane metrike. Datum objave ture ostaje u Markdown-u.
+Sažeci se izvode automatski:
+
+| `trackMode` | Pravilo |
+|---|---|
+| `single` | Tačne metrike jednog traga; zahteva tačno jednu GPX referencu. |
+| `segments` | Zbir dužine, uspona i trajanja; zaokruživanje konačnog zbira na dve decimale. Najviša tačka je maksimum. |
+| `variants` | Nema zajedničkih metrika; svaka alternativa ima zasebne statistike. |
+
+Ako bilo kojoj deonici nedostaje polje, odgovarajući zbir ostaje nepoznat, umesto
+delimičnog zbira ili nule. Nulti uspon je poznata vrednost i prikazuje se kao `+0 m`.
+Pri migraciji su svi postojeći sažeci odgovarali ovim pravilima.
+Uspon zavisi od šuma visine i filtriranja, pa sirov zbir svih pozitivnih promena
+iz GPX-a nije nužno pouzdana referenca.
+
+Promena JSON-a se vidi u lokalnom `npm run dev`; objavljeni statički sajt dobija nove
+vrednosti posle commit/push-a na deploy granu i uspešnog build/deploy-a.
+GPX koordinate i datoteke za preuzimanje se ovim ne menjaju.
+
+### Opcioni CSV pregled
+
+`data/route-metrics-review.csv` ostaje početni istorijski snimak pre centralizacije,
+ne aktivan izvor istine. Aktuelni pregled centralnog JSON-a i izvedenih sažetaka izvezi komandom:
 
 ```sh
 npm run export:metrics -- data/route-metrics-review-new.csv
 ```
 
+CSV koristi UTF-8 sa BOM oznakom, zarez kao separator i decimalnu tačku. Ako Excel
+ne podeli kolone automatski, koristi uvoz iz Text/CSV. Obuhvaćene su sve GPX datoteke
+i zaseban `hike` red za svaki izvedeni sažetak (`review_status: derived`).
 Izvoz odbija prepisivanje postojećeg fajla da ne izgubi ručno proverene vrednosti.
-
-Trenutno su metrike duplirane u vrhu `hikes/*.md` zapisa i u njihovim `gpxTracks`
-stavkama. Sažeci ture koriste prve, a GPX preuzimanja druge; parser mape čita samo
-koordinate i ne računa dužinu ni uspon. Zbir deonica se ne preračunava automatski.
-Posle provere preporuka je jedan tipizovan centralni izvor metrika po stabilnoj GPX
-putanji, uz izvedene sažetke za `single` i `segments` i eksplicitnu politiku za
-`variants`. Opisi, fotografije i urednički sadržaj mogu ostati u Markdown-u.
-Ova provera još ne menja model sadržaja niti uvodi drugi aktivni izvor istine.
+`corrected_*` kolone su samo opciona radna beleška: CSV se ne uvozi automatski.
+Trajne ispravke unosi u centralni JSON, nikada u Markdown ili izvedene sažetke.
 
 `GpxMap.astro` i pregledna mapa dele parser iz `src/scripts/gpx-map.ts`:
 

@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2024-08-25
 featured: false
 sourceOrder: 6
-distanceKm: 6.78
-elevationM: 504
-durationHours: 5.31
-highestPointM: 2320
 tags: ["Crna Gora","Durmitor","Sedlo","Bandijerna"]
 trailhead:
   lat: 43.098457
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/crna-gora/durmitor/durmitor-bandijerna.gpx"
     label: "Bandijerna (Durmitor)"
     color: "#d56a42"
-    distanceKm: 6.78
-    elevationM: 504
-    durationHours: 5.31
-    highestPointM: 2320
-    date: 2024-08-25
 ---
 
 **Start:** [lokacija](https://maps.app.goo.gl/fshy3gcoDcTU5PSq9)

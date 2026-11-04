@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2026-09-28
 featured: true
 sourceOrder: 1
-distanceKm: 13.69
-elevationM: 1088
-durationHours: 6.06
-highestPointM: 2316
 tags: ["Crna Gora","Prokletije","Čakor","Čakor - Veliki Starac"]
 trailhead:
   lat: 42.668423
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/crna-gora/prokletije/cakor-veliki-starac.gpx"
     label: "Cakor Veliki Starac"
     color: "#3f735e"
-    distanceKm: 13.69
-    elevationM: 1088
-    durationHours: 6.06
-    highestPointM: 2316
-    date: 2026-09-28
 ---
 
 **Start:** [Početna lokacija](https://maps.app.goo.gl/qcLNFnpouQbJjjN49)

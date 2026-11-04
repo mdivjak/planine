@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2021-11-11
 featured: false
 sourceOrder: 0
-distanceKm: 10.29
-elevationM: 572
-durationHours: 5.28
-highestPointM: 856
 tags: ["Srbija","Zapadna Srbija","Kablar"]
 trailhead:
   lat: 43.904371
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/srbija/kablar/kablar.gpx"
     label: "Kablar"
     color: "#d56a42"
-    distanceKm: 10.29
-    elevationM: 572
-    durationHours: 5.28
-    highestPointM: 856
-    date: 2021-11-11
 ---
 
 **Start:** [lokacija](https://maps.app.goo.gl/viExKSrjJDu8JQrx9)

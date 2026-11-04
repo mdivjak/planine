@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2023-09-23
 featured: false
 sourceOrder: 2
-distanceKm: 18.51
-elevationM: 1432
-durationHours: 7.59
-highestPointM: 1345
 tags: ["Srbija","Istočna Srbija","Beljanica","Lisine i Veliki buk","Beljanica kružna"]
 trailhead:
   lat: 44.101639
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/srbija/beljanica/beljanica-kruzna-duza.gpx"
     label: "Beljanica Kruzna Duza"
     color: "#416b8b"
-    distanceKm: 18.51
-    elevationM: 1432
-    durationHours: 7.59
-    highestPointM: 1345
-    date: 2023-09-23
 ---
 
 Ovo je najnapornija varijanta uspona na Beljanicu.

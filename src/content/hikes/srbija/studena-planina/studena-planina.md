@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2022-10-15
 featured: false
 sourceOrder: 0
-distanceKm: 18.19
-elevationM: 794
-durationHours: 7.36
-highestPointM: 1345
 tags: ["Srbija","Južna Srbija","Studena planina"]
 trailhead:
   lat: 43.557272
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/srbija/studena-planina/studena-planina.gpx"
     label: "Trek Studena planina"
     color: "#d56a42"
-    distanceKm: 18.19
-    elevationM: 794
-    durationHours: 7.36
-    highestPointM: 1345
-    date: 2022-10-15
 ---
 
 **Start:** [lokacija](https://maps.app.goo.gl/r6neHucmVxf73K8M6)

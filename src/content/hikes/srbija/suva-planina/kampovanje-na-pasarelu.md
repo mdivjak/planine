@@ -10,10 +10,6 @@ trackMode: "segments"
 date: 2024-04-06
 featured: false
 sourceOrder: 1
-distanceKm: 23.57
-elevationM: 1269
-durationHours: 26.64
-highestPointM: 1569
 tags: ["Srbija","Jugoistočna Srbija","Suva planina","Pasarelo","Kampovanje na Pasarelu"]
 trailhead:
   lat: 43.185603
@@ -23,27 +19,12 @@ gpxTracks:
   - src: "/gpx/archive/srbija/suva-planina/dan1-pasarelo.gpx"
     label: "Suva planina - Pasarelo kampovanje 1/3"
     color: "#3f735e"
-    distanceKm: 13.29
-    elevationM: 1207
-    durationHours: 8.68
-    highestPointM: 1569
-    date: 2024-04-06
   - src: "/gpx/archive/srbija/suva-planina/dan1-bezanje.gpx"
     label: "Suva planina - Pasarelo kampovanje 2/3"
     color: "#416b8b"
-    distanceKm: 1.6
-    elevationM: 54
-    durationHours: 5.01
-    highestPointM: 1506
-    date: 2024-04-06
   - src: "/gpx/archive/srbija/suva-planina/dan2-pasarelo-spustanje.gpx"
     label: "Suva planina - Pasarelo kampovanje 3/3"
     color: "#93616b"
-    distanceKm: 8.68
-    elevationM: 8
-    durationHours: 12.95
-    highestPointM: 1444
-    date: 2024-04-06
 ---
 
 **Start:** [Manastir Svetog Dimitrija](https://maps.app.goo.gl/BNXv6QZRDnuwiJti7)

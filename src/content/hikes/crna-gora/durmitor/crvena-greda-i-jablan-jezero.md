@@ -19,19 +19,9 @@ gpxTracks:
   - src: "/gpx/archive/crna-gora/durmitor/durmitor-crvena-greda.gpx"
     label: "Trek Durmitor: Crvena greda i Jablan jezero"
     color: "#3f735e"
-    distanceKm: 10.55
-    elevationM: 930
-    durationHours: 6.66
-    highestPointM: 2120
-    date: 2023-06-24
   - src: "/gpx/archive/crna-gora/durmitor/durmitor-jablan-jezero.gpx"
     label: "Trek Durmitor: Jablan jezero"
     color: "#416b8b"
-    distanceKm: 5.34
-    elevationM: 241
-    durationHours: 1.49
-    highestPointM: 1837
-    date: 2023-10-29
 ---
 
 **Start:** [lokacija](https://maps.app.goo.gl/mZbbFzEKFA1HQNvp7)

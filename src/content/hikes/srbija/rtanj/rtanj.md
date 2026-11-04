@@ -19,19 +19,9 @@ gpxTracks:
   - src: "/gpx/archive/srbija/rtanj/rtanj-sever-jug.gpx"
     label: "Rtanj Trek"
     color: "#d56a42"
-    distanceKm: 15.01
-    elevationM: 1183
-    durationHours: 7.34
-    highestPointM: 1536
-    date: 2021-05-23
   - src: "/gpx/archive/srbija/rtanj/rtanj-jug.gpx"
     label: "Rtanj Night Trek"
     color: "#3f735e"
-    distanceKm: 15.1
-    elevationM: 960
-    durationHours: 7.15
-    highestPointM: 1536
-    date: 2021-07-31
 ---
 
 **Start jug:** [lokacija](https://maps.app.goo.gl/X8r7rtjjMCJFUyjT9)

@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2025-06-21
 featured: false
 sourceOrder: 0
-distanceKm: 11.02
-elevationM: 1673
-durationHours: 7.45
-highestPointM: 2059
 tags: ["Crna Gora","Prokletije","Greben Popadije i Volušnice","Popadija - Talijanka - Volušnica"]
 trailhead:
   lat: 42.521809
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/crna-gora/prokletije/popadija-talijanka-volusnica.gpx"
     label: "Popadija Talijanka Volusnica"
     color: "#d56a42"
-    distanceKm: 11.02
-    elevationM: 1673
-    durationHours: 7.45
-    highestPointM: 2059
-    date: 2025-06-21
 ---
 
 **Start:** [Dolina Grebaje](https://maps.app.goo.gl/4YM7H1c1y7w1E57K9)

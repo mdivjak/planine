@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2025-11-30
 featured: true
 sourceOrder: 1
-distanceKm: 14.42
-elevationM: 863
-durationHours: 5.99
-highestPointM: 1993
 tags: ["Srbija","Istočna Srbija","Stara planina","Dojkinci i Beleđe","Tri čuke"]
 trailhead:
   lat: 43.321199
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/srbija/stara-planina/dojkinci-tri-cuke.gpx"
     label: "Stara planina: Tri čuke"
     color: "#416b8b"
-    distanceKm: 14.42
-    elevationM: 863
-    durationHours: 5.99
-    highestPointM: 1993
-    date: 2025-11-29
 ---
 
 **Start:** [lokacija](https://maps.app.goo.gl/zGG8uW9j8Z7n1AZz8)

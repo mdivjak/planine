@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2022-12-04
 featured: false
 sourceOrder: 0
-distanceKm: 15.1
-elevationM: 1332
-durationHours: 5.7
-highestPointM: 1848
 tags: ["Srbija","Jugoistočna Srbija","Suva planina","Bojanine vode","Trem od Bojaninih voda"]
 trailhead:
   lat: 43.221415
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/srbija/suva-planina/trem-bojanine-vode.gpx"
     label: "Trek - Suva planina od Bojaninih voda"
     color: "#d56a42"
-    distanceKm: 15.1
-    elevationM: 1332
-    durationHours: 5.7
-    highestPointM: 1848
-    date: 2022-12-04
 ---
 
 **Start:** [lokacija](https://maps.app.goo.gl/nNBZEGeWFG5ByekE8)

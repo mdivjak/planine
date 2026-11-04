@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2022-03-06
 featured: false
 sourceOrder: 0
-distanceKm: 14.85
-elevationM: 864
-durationHours: 7.15
-highestPointM: 1021
 tags: ["Srbija","Zapadna Srbija","Magleš"]
 trailhead:
   lat: 44.155412
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/srbija/magles/magles.gpx"
     label: "Trek Magles"
     color: "#d56a42"
-    distanceKm: 14.85
-    elevationM: 864
-    durationHours: 7.15
-    highestPointM: 1021
-    date: 2022-03-06
 ---
 
 **Start:** [Železnička stanica Lastra](https://maps.app.goo.gl/toUdZLNVyz1GqAnLA)

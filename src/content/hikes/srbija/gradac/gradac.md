@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2024-11-17
 featured: false
 sourceOrder: 0
-distanceKm: 14.19
-elevationM: 433
-durationHours: 5.63
-highestPointM: 396
 tags: ["Srbija","Zapadna Srbija","Gradac"]
 trailhead:
   lat: 44.25142
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/srbija/gradac/gradac.gpx"
     label: "Gradac"
     color: "#d56a42"
-    distanceKm: 14.19
-    elevationM: 433
-    durationHours: 5.63
-    highestPointM: 396
-    date: 2024-11-17
 ---
 
 **Start:** [Parking kod kafića River](https://maps.app.goo.gl/WqQC8vcNevoL6Vkd7)

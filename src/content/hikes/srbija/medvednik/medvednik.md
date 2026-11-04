@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2023-09-02
 featured: false
 sourceOrder: 0
-distanceKm: 13.47
-elevationM: 781
-durationHours: 5.23
-highestPointM: 1227
 tags: ["Srbija","Zapadna Srbija","Medvednik"]
 trailhead:
   lat: 44.206057
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/srbija/medvednik/medvednik.gpx"
     label: "Trek Medvednik"
     color: "#d56a42"
-    distanceKm: 13.47
-    elevationM: 781
-    durationHours: 5.23
-    highestPointM: 1227
-    date: 2023-09-02
 ---
 
 **Start:** [Kod Planinarskog doma Krušik](https://maps.app.goo.gl/qEJi2n62FJm1UDaWA)

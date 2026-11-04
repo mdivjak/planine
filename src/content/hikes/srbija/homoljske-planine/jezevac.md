@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2023-03-26
 featured: false
 sourceOrder: 2
-distanceKm: 9.8
-elevationM: 958
-durationHours: 4.79
-highestPointM: 694
 tags: ["Srbija","Istočna Srbija","Homoljske planine","Šetonje i Gornjak","Ježevac"]
 trailhead:
   lat: 44.281247
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/srbija/homoljske-planine/jezevac.gpx"
     label: "Trek Ježevac"
     color: "#7965a5"
-    distanceKm: 9.8
-    elevationM: 958
-    durationHours: 4.79
-    highestPointM: 694
-    date: 2023-03-26
 ---
 
 **Start:** [lokacija](https://maps.app.goo.gl/qDfQh7yJ4NBsCkki6)

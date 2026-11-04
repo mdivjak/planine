@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2022-04-17
 featured: false
 sourceOrder: 0
-distanceKm: 19.22
-elevationM: 977
-durationHours: 6.47
-highestPointM: 622
 tags: ["Srbija","Vojvodina","Vršačke planine","Manastir Središte - Hajdučke stene - Lisičija glava"]
 trailhead:
   lat: 45.144401
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/srbija/vrsacke-planine/vrsacke-planine.gpx"
     label: "Trek Vrsacke planine"
     color: "#d56a42"
-    distanceKm: 19.22
-    elevationM: 977
-    durationHours: 6.47
-    highestPointM: 622
-    date: 2022-04-17
 ---
 
 **Start:** [Manastir Središte](https://maps.app.goo.gl/nhKr4uPwdABEYsmd9)

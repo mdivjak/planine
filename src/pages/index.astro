@@ -3,10 +3,10 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HikeDirectory from '../components/HikeDirectory.astro';
 import TrailExplorerMap from '../components/TrailExplorerMap.astro';
-import { connectHikes, formatDate, hikePath, withBase } from '../utils/hikes';
+import { connectHikes, formatDate, getHikes, hikePath, withBase } from '../utils/hikes';
 
 const guides = await getCollection('guides');
-const records = connectHikes(await getCollection('hikes'), guides).sort(
+const records = connectHikes(await getHikes(), guides).sort(
   (a, b) => b.hike.data.date.valueOf() - a.hike.data.date.valueOf(),
 );
 const latest = records.slice(0, 3);

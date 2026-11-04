@@ -10,10 +10,6 @@ trackMode: "single"
 date: 2024-02-17
 featured: false
 sourceOrder: 0
-distanceKm: 9.64
-elevationM: 749
-durationHours: 2.65
-highestPointM: 894
 tags: ["Crna Gora","Primorje","Boka kotorska","Šanik tvrđava"]
 trailhead:
   lat: 42.52536
@@ -23,11 +19,6 @@ gpxTracks:
   - src: "/gpx/archive/crna-gora/boka-kotorska/sanik-tvrdjava.gpx"
     label: "Trek Orjen - Šanik tvrđava"
     color: "#d56a42"
-    distanceKm: 9.64
-    elevationM: 749
-    durationHours: 2.65
-    highestPointM: 894
-    date: 2024-02-17
 ---
 
 **Start:** [lokacija](https://maps.app.goo.gl/EXMwg6xpKvga2YBB9)
